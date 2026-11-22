@@ -8,6 +8,17 @@ const root=path.resolve(__dirname,'..'),out=path.join(root,'dist/site');
  await fs.copyFile(path.join(root,'docs/legal/THIRD_PARTY_NOTICES.md'),path.join(out,'THIRD_PARTY_NOTICES.md'));
  await fs.copyFile(path.join(root,'docs/legal/VEHICLE-ASSETS.json'),path.join(out,'VEHICLE-ASSETS.json'));
  for(const file of ['index.html','style.css','site.js'])await fs.copyFile(path.join(root,'site',file),path.join(out,file));
+ // One approved prompt supplies the website preview, copy button and download.
+ const setupGuide=await fs.readFile(path.join(root,'docs/AI_SETUP.md'),'utf8');
+ const setupPrompt=setupGuide.match(/```text\r?\n([\s\S]*?)\r?\n```/)?.[1].replaceAll('\r\n','\n');
+ if(!setupPrompt)throw new Error('AI_SETUP.md must contain the approved text prompt');
+ const readme=await fs.readFile(path.join(root,'README.md'),'utf8');
+ if(!readme.replaceAll('\r\n','\n').includes('```text\n'+setupPrompt+'\n```'))throw new Error('README setup prompt differs from docs/AI_SETUP.md');
+ const siteTemplate=await fs.readFile(path.join(out,'index.html'),'utf8');
+ if(!siteTemplate.includes('<!-- AI_SETUP_PROMPT -->'))throw new Error('Website setup prompt placeholder missing');
+ const escapedPrompt=setupPrompt.replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;');
+ await fs.writeFile(path.join(out,'index.html'),siteTemplate.replace('<!-- AI_SETUP_PROMPT -->',()=>escapedPrompt));
+ await fs.writeFile(path.join(out,'setup-prompt.txt'),setupPrompt);
  await fs.mkdir(path.join(out,'assets'),{recursive:true});
  for(const [src,dest] of [['brand/wordmark.svg','wordmark.svg'],['brand/mark.svg','mark.svg'],['public/favicon.svg','favicon.svg'],['brand/exports/social-card.png','social-card.png'],['public/assets/inter-latin.woff2','inter-latin.woff2'],['public/assets/INTER-LICENSE','INTER-LICENSE']])await fs.copyFile(path.join(root,src),path.join(out,'assets',dest));
  await fs.cp(path.join(root,'brand'),path.join(out,'brand'),{recursive:true});

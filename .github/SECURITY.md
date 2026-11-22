@@ -3,6 +3,8 @@
 
 Mate4Mobile is intended for a trusted household LAN or private VPN, behind trusted HTTPS. It uses one shared passphrase, not per-user accounts or a public identity system. Do not publish the backend as an unaudited public service.
 
+An optional gateway such as TinyAuth can provide another authentication layer on a dedicated domain; see the [Caddy and TinyAuth guide](../docs/HTTPS.md#add-tinyauth-as-another-login-layer). Keep Mate4Mobile authentication and backend isolation enabled. Gateway users share the same application access after app login; this does not create per-user permissions or change the private-deployment baseline.
+
 ## Reporting a vulnerability
 
 Use GitHub’s **Report a vulnerability** option on the repository Security tab when private reporting is enabled. If it is unavailable, open a minimal issue requesting a private contact method; do not include exploit details, credentials or personal telemetry in public. The maintainer enables private reporting as part of the [publishing checklist](../docs/PUBLISHING.md).
