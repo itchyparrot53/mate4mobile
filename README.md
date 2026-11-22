@@ -13,7 +13,7 @@
 
 **TeslaMate records it. Mate4Mobile gives it a home on your phone.**
 
-Your battery, journeys and charging in a private, self-hosted dashboard that feels at home on your Home Screen. Connect it to your existing TeslaMate installation; your logger keeps doing what it does best.
+Check your battery before you leave. Revisit a drive. See what charging costs. Mate4Mobile brings your existing TeslaMate history into a private dashboard you can add to your Home Screen. Free to self-host, with your logger running as usual.
 
 <p align="center">
   <a href="https://itchyparrot53.github.io/mate4mobile/demo/">
@@ -21,7 +21,7 @@ Your battery, journeys and charging in a private, self-hosted dashboard that fee
   </a>
 </p>
 
-<p align="center"><sub>Preview with synthetic data · <a href="https://itchyparrot53.github.io/mate4mobile/demo/">Try the interactive demo</a></sub></p>
+<p align="center"><sub>Try it before you install · Sample data · <a href="https://itchyparrot53.github.io/mate4mobile/demo/">Try the interactive demo</a></sub></p>
 
 <a id="getting-started"></a>
 
@@ -29,7 +29,7 @@ Your battery, journeys and charging in a private, self-hosted dashboard that fee
 
 You’ll need an existing TeslaMate PostgreSQL database, a Linux host with Docker Compose v2, and `git`, `bash` and `openssl`.
 
-**1. Run the guided installer** on your TeslaMate Docker host. Copy this whole block:
+**1. Start the guided setup.** On your TeslaMate Docker host, copy and run this block:
 
 ```bash
 git clone https://github.com/itchyparrot53/mate4mobile.git &&
@@ -37,9 +37,9 @@ cd mate4mobile &&
 bash scripts/setup.sh
 ```
 
-**2. Choose your database.** Setup lists your containers and networks. Select the PostgreSQL container, its network and database owner. It creates a restricted reader and starts Mate4Mobile separately, leaving your logger running.
+**2. Connect your existing data.** Setup lists your containers and networks. Select the PostgreSQL container, its network and database owner. It creates a restricted reader and starts Mate4Mobile separately, leaving your logger running.
 
-**3. Open it on your phone.** Follow the [HTTPS setup guide](docs/HTTPS.md) to connect a private HTTPS address to `127.0.0.1:8099`. Sign in using `APP_PASS` from the generated `.env`, then choose **Add to Home Screen**.
+**3. Make it a tap away.** Follow the [HTTPS setup guide](docs/HTTPS.md) to connect a private HTTPS address to `127.0.0.1:8099`. Sign in using `APP_PASS` from the generated `.env`, then choose **Add to Home Screen**.
 
 **Already installed?** Use the [upgrade guide](docs/OPERATIONS.md).
 
@@ -81,7 +81,7 @@ Keep the passphrase and `.env` private. HTTPS is required with the default Secur
 
 </details>
 
-## Explore the app
+## Your day, in view
 
 <a id="screenshots"></a>
 
@@ -107,10 +107,10 @@ Keep the passphrase and `.env` private. HTTPS is required with the default Secur
 
 | View | What you get |
 | --- | --- |
-| **Vehicle** | Latest recorded battery, range, climate and location; today’s distance, driving time and charging; configurable vehicle imagery. |
-| **Activity** | Drives and charges in one timeline, grouped by local date with details a tap away. |
-| **Journeys** | Route maps and linked speed, power and battery charts. Scrub through a drive to follow the recorded position. |
-| **Charging** | Energy or spend over a week, month or three months; location breakdowns, charging curves and cost coverage. |
+| **Vehicle** | Get ready for your next drive: latest recorded battery, range, climate and location, plus today’s driving and charging. Choose your vehicle model and paint. |
+| **Activity** | Catch up on your day: drives and charges in one timeline, with details a tap away. |
+| **Journeys** | Revisit a drive: follow the route while exploring linked speed, power and battery charts. |
+| **Charging** | Understand your charging: compare energy and spend, see where you charge and inspect individual sessions. Missing costs stay visible. |
 | **Energy** | Driving totals and clearly labelled battery estimates that build context as your history grows. |
 | **Every screen** | Responsive desktop layouts, mobile sheets, keyboard navigation, reduced-motion support and an installable PWA shell. |
 
