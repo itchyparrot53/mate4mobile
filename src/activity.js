@@ -1,5 +1,6 @@
 'use strict';
 
+
 function parseCursor(raw) {
   if (!raw) return null;
   if (raw.length > 256 || !/^[A-Za-z0-9_-]+$/.test(raw)) throw new Error('invalid cursor');

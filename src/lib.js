@@ -1,5 +1,6 @@
 'use strict';
 
+
 function thinPoints(points, limit = 250) {
   if (limit <= 0) return [];
   if (limit === 1) return points.length ? [points[points.length-1]] : [];

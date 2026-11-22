@@ -1,4 +1,5 @@
 'use strict';
+
 const {thinPoints}=require('./lib');
 
 // Select actual observations in equal TIME buckets, never sample-weighted averages.

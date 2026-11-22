@@ -1,4 +1,5 @@
 'use strict';
+
 const {test}=require('node:test');
 const assert=require('node:assert/strict');
 const {parseCursor,cursorFor,getActivity}=require('../src/activity');
