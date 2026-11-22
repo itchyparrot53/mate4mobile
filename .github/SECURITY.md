@@ -1,5 +1,6 @@
 # Security policy
 
+
 Mate4Mobile is intended for a trusted household LAN or private VPN, behind trusted HTTPS. It uses one shared passphrase, not per-user accounts or a public identity system. Do not publish the backend as an unaudited public service.
 
 ## Reporting a vulnerability

@@ -1,5 +1,6 @@
 # Changelog
 
+
 ## 2.4.2 — Unobtrusive scrolling
 
 - Hid visible scrollbar tracks on the app page, desktop sidebar and detail sheets while preserving native scrolling and keyboard navigation.

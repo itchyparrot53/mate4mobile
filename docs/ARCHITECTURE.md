@@ -1,5 +1,6 @@
 # Architecture
 
+
 ```text
 src/server.js        Node HTTP, authentication, static serving, read-only API
 src/activity.js      Combined cursor-based drive/charge timeline

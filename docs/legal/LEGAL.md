@@ -1,5 +1,6 @@
 # Legal and attribution notice
 
+
 ## Independent project
 
 Mate4Mobile is an independent companion for TeslaMate. It is not affiliated with, endorsed by, sponsored by or an official product of Tesla, Inc. or the TeslaMate project.

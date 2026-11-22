@@ -1,5 +1,6 @@
 # Troubleshooting
 
+
 | Symptom | Check |
 | --- | --- |
 | Setup says `.env` exists | This is deliberate. Use the upgrade/start steps; do not regenerate secrets over a working install. |

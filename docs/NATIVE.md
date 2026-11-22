@@ -1,5 +1,6 @@
 # Native Node and systemd installation
 
+
 For an existing Linux/LXC TeslaMate deployment without Docker. Use Node 22+ (Node 24 LTS recommended) and PostgreSQL access from this host. Do not change the logger’s service, encryption key, Tesla credentials or database owner.
 
 1. Clone the repository and install production dependencies with `npm ci --omit=dev`.

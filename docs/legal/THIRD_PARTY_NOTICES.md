@@ -1,5 +1,6 @@
 # Third-party notices
 
+
 The project’s MIT licence covers its own code, original SVG identity. The following retain their respective licences:
 
 | Component | Licence / retained notice |

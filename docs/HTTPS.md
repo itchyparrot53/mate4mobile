@@ -1,5 +1,6 @@
 # HTTPS and Home Screen installation
 
+
 The private app must be reachable from the phone through trusted HTTPS. GitHub Pages hosts the public showcase, not your dashboard. PWA installation and service workers depend on a secure browser context; `localhost` is a development exception, not a remote-phone address.
 
 ## Host-installed Caddy

@@ -1,5 +1,6 @@
 # Release checklist and validation
 
+
 ## Preparing a release
 
 1. Update `package.json`, the lockfile, `/healthz` version, Preferences version text and `docs/CHANGELOG.md`.

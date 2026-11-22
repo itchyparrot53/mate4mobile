@@ -1,5 +1,6 @@
 # Configuration reference
 
+
 Compose reads a private `.env` in the repository root. Native Node users load the same settings through systemd or `node --env-file=.env src/server.js`. Do not commit the file. Keep generated values unchanged across app upgrades unless deliberately rotating them.
 
 | Variable | Default | Meaning |

@@ -1,5 +1,6 @@
 # Install alongside an existing TeslaMate deployment
 
+
 The installer adds one app container and one restricted PostgreSQL role. Your TeslaMate containers, telemetry tables and logger configuration stay in place. It assumes the [standard TeslaMate Docker layout](https://docs.teslamate.org/docs/installation/docker/): an existing PostgreSQL container on a Docker network reachable by other containers.
 
 ## 1. Check the prerequisites

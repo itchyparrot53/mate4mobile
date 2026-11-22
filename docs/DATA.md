@@ -1,5 +1,6 @@
 # What the readings mean
 
+
 Mate4Mobile displays TeslaMate records. It does not poll Tesla, wake the car, recalculate every upstream value or create missing telemetry.
 
 - **Latest reading:** A timestamped observation, potentially older while the vehicle sleeps. The home screen labels its age.
