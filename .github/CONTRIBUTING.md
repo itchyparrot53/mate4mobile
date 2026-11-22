@@ -2,6 +2,10 @@
 
 Small, focused improvements to the daily experience are welcome. Open an issue for substantial changes so the intended behaviour is clear before implementation.
 
+## Commit messages
+
+Use `<Action emoji> <Scope emoji> <Imperative description>` for every commit and squash-merge title. Aim for fewer than 60 characters. See the [commit naming convention](../docs/COMMIT_CONVENTION.md) for the action/scope tables and copyable examples.
+
 ## Local development
 
 Use Node 22+ and run `npm ci`. `npm run site && npm run preview` opens the full synthetic demo without a database. It is the easiest way to work on the interface safely.
