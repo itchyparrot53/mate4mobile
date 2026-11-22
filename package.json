@@ -1,7 +1,7 @@
 {
 
   "name": "mate4mobile",
-  "version": "2.4.2",
+  "version": "0.0.1-beta",
   "private": true,
   "description": "Every mile, in view. A private, mobile-first TeslaMate companion.",
   "main": "src/server.js",

@@ -381,7 +381,13 @@ Open `http://localhost:4173/mate4mobile/` for the website and demo. A database i
 | `npm run test:install` | Test the installer and image with disposable Docker PostgreSQL. |
 | `npm run doctor` | Read-only database configuration and privilege checks. |
 
-An early public release, developed from a running personal installation. The public installer targets the standard single-database TeslaMate Docker layout. Native deployments are documented separately. Review the [validation record](docs/RELEASE.md) for what has actually been tested; unusual database schemas and proxy topologies may need configuration.
+**Current release: [0.0.1 Beta](https://github.com/itchyparrot53/mate4mobile/releases/tag/v0.0.1-beta).** This started as something I built for my own use.
+
+**Real-world testing so far:** my TeslaMate installation was set up using the Proxmox Community Scripts, and I run Mate4Mobile in that LXC container. That is the only setup I have personally used and tested. I have not personally checked other installation methods or deployments yet.
+
+Docker/Compose and other setups are documented for people willing to try the beta, but they still need real-world feedback. Automated tests, synthetic Docker installer checks and browser previews are separate from testing those setups with real users. See the [validation record](docs/RELEASE.md) for that distinction.
+
+**Help improve the beta:** if you try it, please [report how setup went](https://github.com/itchyparrot53/mate4mobile/issues/new/choose), including your deployment method, relevant versions and the step that worked or failed. Remove credentials, VINs, locations and other private data before sharing.
 
 Built with substantial AI assistance: GPT6 Astra as planner and DeepSeek 4.1 Flash 1017 as builder. See the [AI development disclosure](docs/AI_DISCLOSURE.md).
 

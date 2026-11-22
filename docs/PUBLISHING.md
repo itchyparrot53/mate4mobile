@@ -75,6 +75,12 @@ Verify the website and demo at that real subpath. Check the README screenshots, 
 
 ## 4. Release
 
-Use [RELEASE.md](RELEASE.md), tag a reviewed revision and write concise release notes identifying the supported installation paths and known limits. Do not advertise a container registry image until an actual image publishing workflow exists; this release builds its Docker image locally.
+Use [RELEASE.md](RELEASE.md). The first public prerelease is `v0.0.1-beta`; previous `2.4.x` numbers were development labels.
+
+The `Beta release` workflow runs when a tag matching `v*-beta*` is pushed. The tag must match `package.json`, and its release notes must exist at `docs/releases/TAG.md`. It runs app tests, site checks and the disposable Docker installer test before creating a draft release, uploading three ZIPs and checksums, then publishing it as a **prerelease**, not the latest stable release.
+
+For a new beta, update all app version references and the lockfile, write the notes, commit using the two-emoji convention, and push the reviewed commit. Then create and push its annotated tag. Do not move or recreate an already-published tag. A workflow rerun can resume an incomplete draft; it leaves an already-published release unchanged.
+
+Confirm the release is marked pre-release, its tag points to the checked commit, and all four assets are present. The source archive contains tracked files only; the website archive contains the static showcase/synthetic demo, not a private app deployment. No container registry image is published: the installer builds its Docker image locally.
 
 If the repo is renamed/forked, update the GitHub links and canonical/Open Graph URLs in `README.md`, `site/index.html`, `scripts/build-site.cjs`, this guide and `site/site.js` if commands change. Asset paths are relative, so the site/demo can be served under a different project path without changing production app paths.

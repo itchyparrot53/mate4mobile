@@ -1,6 +1,18 @@
 # Changelog
 
 
+## 0.0.1-beta — First public beta
+
+- Published the existing mobile/desktop dashboard as the first versioned public beta: vehicle overview, activity timeline, journey maps/charts and charging history.
+- Included configurable vehicle imagery, distance units and display currency.
+- Included Docker and native installation guides, restricted-reader provisioning, Caddy/TinyAuth guidance and the approved AI-assisted setup prompt.
+- Documented the testing boundary: the maintainer's only real-world deployment is a Proxmox Community Scripts TeslaMate installation with Mate4Mobile running in its LXC container. Other deployments need community feedback.
+- Added a beta release workflow that checks the tagged source, builds downloadable source/website/brand archives, and publishes checksums with the prerelease.
+
+The public release series starts at `0.0.1-beta`. The `2.3`/`2.4.x` entries below are earlier development labels, not previous stable public releases. Existing personal deployments do not need to be reinstalled just to adopt the new numbering.
+
+## Earlier development history
+
 ## 2.4.2 — Unobtrusive scrolling
 
 - Hid visible scrollbar tracks on the app page, desktop sidebar and detail sheets while preserving native scrolling and keyboard navigation.

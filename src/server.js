@@ -778,7 +778,7 @@ const server = http.createServer(async (req, res) => {
     }
     if (pathname === '/healthz') {
       await pool.query('select 1');
-      return json(res, 200, { ok: true, version: '2.4.2', ts: new Date().toISOString() });
+      return json(res, 200, { ok: true, version: '0.0.1-beta', ts: new Date().toISOString() });
     }
 
     if (pathname === '/api/login' && req.method === 'POST') {

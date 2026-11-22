@@ -1,6 +1,16 @@
 # Release checklist and validation
 
 
+## 0.0.1 Beta: what has actually been tried
+
+The maintainer built this for personal use. Their only real-world deployment is TeslaMate installed using the **Proxmox Community Scripts**, with Mate4Mobile running in that **LXC container**. Other installation methods and deployments have not been personally checked by the maintainer.
+
+Automated Node tests, synthetic Docker/PostgreSQL installer checks and browser preview checks are recorded below. They do not establish that Docker deployment, every LXC configuration, a particular domain/authentication gateway or physical phone installation has been tested end to end with real user data. This beta needs installation feedback from other environments.
+
+Public releases begin at `v0.0.1-beta`; older `2.4.x` references describe development history. Release packaging does not deploy changes to the maintainer's private server.
+
+The beta publication workflow reruns the 33 app tests, source/Pages checks and synthetic Docker installer check on the tagged revision before publishing its downloads. Its green result is automated validation, not a report of another person's successful installation.
+
 ## Preparing a release
 
 1. Update `package.json`, the lockfile, `/healthz` version, Preferences version text and `docs/CHANGELOG.md`.
