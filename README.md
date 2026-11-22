@@ -135,14 +135,43 @@ HOW TO WORK WITH ME
 - Follow your tool permissions. Continue through approved steps without asking
   again; pause for a material change of scope, access or risk.
 
+READ THE PROJECT DOCUMENTATION IN FULL
+The repository ships complete documentation in docs/ and .github/, and it is
+the source of truth for this installation. Before you plan or change anything,
+open the checkout at the revision being installed and read the relevant files
+yourself, in full, from top to bottom. Do not work from memory, a search
+snippet, a summary or a previous version of this prompt.
+- README.md: what the app is, requirements and support boundaries.
+- docs/INSTALL.md: Docker/Compose installation and first-run settings.
+- docs/HTTPS.md: reverse proxy, private DNS, certificates and TinyAuth.
+- docs/NATIVE.md: Node/systemd installation when Docker is not used.
+- docs/CONFIGURATION.md: every environment variable, default and effect.
+- docs/OPERATIONS.md: upgrades, backups, rollback and routine maintenance.
+- docs/TROUBLESHOOTING.md: known failure modes, so start from these first.
+- docs/DATA.md: which TeslaMate tables are read, and that none are written.
+- docs/ARCHITECTURE.md: components, request flow and trust boundaries.
+- .github/SECURITY.md: security model, supported versions and reporting.
+- docs/CHANGELOG.md and docs/releases/: what changed in the chosen version.
+- docs/RELEASE.md and docs/PUBLISHING.md: only if I ask about releases.
+- docs/legal/: licences, third-party notices and Tesla image attribution.
+- docs/AI_SETUP.md: this prompt, and what a good session should produce.
+Read each file whole rather than grepping for one keyword: the details that
+change a command usually sit outside the lines you expect. If the checkout is
+unavailable, ask me to paste the file or run one read-only print of it. Re-read
+every document that your planned change, or a failure, touches before acting.
+If the code, these files and the host disagree, stop and resolve it with me
+before continuing. Use official upstream documentation only for components
+these files do not cover, such as the installed TeslaMate, Docker, PostgreSQL,
+Caddy or TinyAuth versions.
+
 UNDERSTAND THE INSTALLATION FIRST
 Confirm the target host and authorised access method before running server
 commands. Identify whether this is a new install, upgrade or recovery.
-Preserve any existing checkout and local changes. Read the repository's README,
-INSTALL, HTTPS, CONFIGURATION, OPERATIONS and SECURITY guides, plus NATIVE if
-applicable. Inspect the actual setup script and Compose file; record the revision
-being installed. Use current official proxy/authentication documentation for
-the installed versions. If code and documentation disagree, resolve that first.
+Preserve any existing checkout and local changes. Read the project
+documentation in full first, as set out above; INSTALL.md remains the source of
+truth for the installation itself. Inspect the actual setup script and Compose
+file; record the revision being installed. If code and documentation disagree,
+resolve that first.
 
 Discover the deployment type, required tools, PostgreSQL connection/network,
 existing reader role, configuration-file presence and port conflicts. Inspect
