@@ -6,6 +6,10 @@
   color-scheme: dark; font: 16px Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; font-synthesis: none;
 }
 * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+/* Keep native scrolling while hiding browser chrome on app surfaces. */
+html, body, .sidebar, .sheet-body { scrollbar-width: none; }
+html::-webkit-scrollbar, body::-webkit-scrollbar,
+.sidebar::-webkit-scrollbar, .sheet-body::-webkit-scrollbar { display: none; width: 0; height: 0; }
 body { margin: 0; background: var(--bg); color: var(--text); line-height: 1.45; min-height: 100dvh; overscroll-behavior-y: contain; }
 button,input,select { font: inherit; }
 button,a,input,select { touch-action: manipulation; }

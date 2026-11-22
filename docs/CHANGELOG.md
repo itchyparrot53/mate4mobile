@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.4.2 — Unobtrusive scrolling
+
+- Hid visible scrollbar tracks on the app page, desktop sidebar and detail sheets while preserving native scrolling and keyboard navigation.
+- Applied the same treatment to the showcase and brand board, including the embedded app preview.
+- Refreshed the README screenshots from the updated interface using synthetic data.
+
 ## 2.4.1 — Currency configuration and repository cleanup
 
 - Validated and normalized the environment currency, with consistent formatting across cost totals, tariffs, session fees and charts. Documented GBP, EUR, USD and other supported currencies; Preferences shows the configured code.
