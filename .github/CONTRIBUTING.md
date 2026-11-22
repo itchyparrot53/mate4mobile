@@ -41,3 +41,7 @@ For UI changes, check 320px and 390px phones, a tablet-width layout and desktop.
 - Preserve upstream licences and credit original contributions.
 
 Pull requests should describe the user-visible problem, the resulting behaviour and relevant validation. Be respectful, assume good intent, and discuss the work rather than the contributor. Do not post someone else’s location, vehicle identity, tokens or private logs.
+
+## Upstream code and query provenance
+
+Do not copy or adapt TeslaMate dashboard SQL or other upstream code into MIT-covered files without reviewing the source revision, licence and attribution obligations first. Record sources for contributed queries; AI-generated output is not proof of independent authorship. Shared schema names or ordinary SQL syntax alone do not establish copying. See [upstream review](../docs/legal/UPSTREAM_REVIEW.md).

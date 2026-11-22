@@ -30,6 +30,8 @@ The showcase is static HTML/CSS/JS. Pages workflows upload only `dist/site`, nev
 
 ## Compatibility
 
+Mate4Mobile reads TeslaMate’s internal PostgreSQL schema, which is not a supported integration interface and may change without notice. MQTT is TeslaMate’s supported integration surface. Database compatibility and support for this app are maintained here, not by TeslaMate. Back up before upgrading and check Mate4Mobile compatibility; report app or installation problems to [Mate4Mobile issues](https://github.com/itchyparrot53/mate4mobile/issues).
+
 The private app is hosted at `/` on its own origin. The public website/demo supports the GitHub Pages `/mate4mobile/` project path. These are separate deployment concerns; a Pages subpath build does not make the private backend a subpath application.
 
 The original personal deployment used `tm-mobile` service/cache names. Cookie and preference names remain compatible. The production cache key deliberately retains the `tm-mobile` prefix so an update clears old shells belonging to this app without touching unrelated caches.

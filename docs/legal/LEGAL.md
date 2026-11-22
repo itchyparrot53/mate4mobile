@@ -3,6 +3,10 @@
 
 ## Independent project
 
+This project is an unofficial community tool and is not affiliated with, endorsed by, or supported by the official TeslaMate project.
+
+See [the upstream review](UPSTREAM_REVIEW.md) for query comparison scope, unsupported database integration and the outstanding trademark-consent question. These notices do not grant permission or establish legal clearance.
+
 Mate4Mobile is an independent companion for TeslaMate. It is not affiliated with, endorsed by, sponsored by or an official product of Tesla, Inc. or the TeslaMate project.
 
 ## Tesla vehicle imagery and trademarks

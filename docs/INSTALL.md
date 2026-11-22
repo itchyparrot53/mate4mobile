@@ -1,5 +1,7 @@
 # Install alongside an existing TeslaMate deployment
 
+Mate4Mobile reads TeslaMate’s internal PostgreSQL schema, which is not a supported integration interface and may change without notice. MQTT is TeslaMate’s supported integration surface. Database compatibility and support for this app are maintained here, not by TeslaMate. Back up before upgrading and check Mate4Mobile compatibility; report app or installation problems to [Mate4Mobile issues](https://github.com/itchyparrot53/mate4mobile/issues).
+
 
 The installer adds one app container and one restricted PostgreSQL role. Your TeslaMate containers, telemetry tables and logger configuration stay in place. It assumes the [standard TeslaMate Docker layout](https://docs.teslamate.org/docs/installation/docker/): an existing PostgreSQL container on a Docker network reachable by other containers.
 

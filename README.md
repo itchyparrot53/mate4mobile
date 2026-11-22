@@ -11,6 +11,8 @@
 
 ## What is Mate4Mobile?
 
+This project is an unofficial community tool and is not affiliated with, endorsed by, or supported by the official TeslaMate project.
+
 **TeslaMate records it. Mate4Mobile gives it a home on your phone.**
 
 Mate4Mobile is a **self-hosted web app for your existing TeslaMate installation**. It reads the history in your TeslaMate PostgreSQL database and turns it into a dashboard for your phone and desktop. Add it to your Home Screen as a PWA, then check your battery, revisit drives and explore charging costs.
