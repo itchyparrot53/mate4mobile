@@ -7,7 +7,7 @@ const fs = require('node:fs/promises');
 const path = require('node:path');
 let child,base,port;
 before(async()=>{
-  child=spawn(process.execPath,['server.js'],{cwd:path.resolve(__dirname,'..'),env:{...process.env,HOST:'127.0.0.1',PORT:'0',APP_PASS:'test-only-pass',APP_SECRET:'test-only-secret-'.repeat(3),PGHOST:'127.0.0.1',PGPORT:'65534'},stdio:['ignore','pipe','pipe']});
+  child=spawn(process.execPath,['src/server.js'],{cwd:path.resolve(__dirname,'..'),env:{...process.env,HOST:'127.0.0.1',PORT:'0',APP_PASS:'test-only-pass',APP_SECRET:'test-only-secret-'.repeat(3),PGHOST:'127.0.0.1',PGPORT:'65534'},stdio:['ignore','pipe','pipe']});
   await new Promise((resolve,reject)=>{
     const timer=setTimeout(()=>reject(new Error('server did not start')),5000);
     child.stdout.on('data',chunk=>{const match=String(chunk).match(/listening on 127.0.0.1:(\d+)/);if(match){port=Number(match[1]);base=`http://127.0.0.1:${port}`;clearTimeout(timer);resolve();}});
@@ -48,7 +48,7 @@ test('malformed Host does not crash the process',async()=>{
 });
 test('health detects database failure',async()=>{assert.equal((await fetch(base+'/healthz')).status,503);});
 test('shell asset references exist on disk',async()=>{
-  for(const file of ['assets/model-3.png','assets/inter-latin.woff2','vendor/leaflet.js','vendor/leaflet.css','manifest.webmanifest']) {
+  for(const file of ['money.js','assets/model-3.png','assets/inter-latin.woff2','vendor/leaflet.js','vendor/leaflet.css','manifest.webmanifest']) {
     assert.equal((await fetch(base+'/'+file)).status,200);
   }
 });

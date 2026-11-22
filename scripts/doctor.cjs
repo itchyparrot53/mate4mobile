@@ -1,7 +1,9 @@
 'use strict';
 const {Client}=require('pg');
+const {getCurrencyCode}=require('../public/money');
 const tables=['cars','settings','states','positions','drives','charging_processes','charges','updates','addresses','geofences'];
 (async()=>{
+ try{getCurrencyCode(process.env.CURRENCY);}catch(error){console.error('FAIL '+error.message);process.exitCode=1;return;}
  const client=new Client({connectionTimeoutMillis:6000,statement_timeout:8000});
  let failures=0;const check=(ok,message)=>{console.log(`${ok?'PASS':'FAIL'} ${message}`);if(!ok)failures++;};
  try{
@@ -19,7 +21,7 @@ const tables=['cars','settings','states','positions','drives','charging_processe
   // Preparing these zero-row projections verifies the feature-critical schema.
   for(const sql of ['SELECT battery_level,usable_battery_level,drive_id,power,speed,date FROM positions LIMIT 0','SELECT cost_per_unit,session_fee,billing_type FROM geofences LIMIT 0','SELECT charge_energy_added,charge_energy_used,start_battery_level,end_battery_level,cost FROM charging_processes LIMIT 0'])await client.query(sql);
   console.log('PASS Core telemetry columns are available');
-  try{new Intl.DateTimeFormat('en-GB',{timeZone:process.env.TZ||'Europe/London'}).format();new Intl.NumberFormat('en-GB',{style:'currency',currency:process.env.CURRENCY||'GBP'}).format(0);console.log('PASS Timezone and currency');}catch{check(false,'Timezone and currency must be valid');}
+  try{new Intl.DateTimeFormat('en-GB',{timeZone:process.env.TZ||'Europe/London'}).format();new Intl.NumberFormat('en-GB',{style:'currency',currency:getCurrencyCode(process.env.CURRENCY)}).format(0);console.log('PASS Timezone and currency');}catch{check(false,'Timezone and currency must be valid');}
  }catch(error){console.error(`FAIL ${error.code||'connection/schema'}: Check database settings, grants and TeslaMate schema. No credentials were logged.`);failures++;}
  finally{await client.end().catch(()=>{});}
  if(failures){console.error('Doctor found issues. See docs/TROUBLESHOOTING.md. No data or grants were changed.');process.exitCode=1;}else console.log('Mate4Mobile database checks passed.');

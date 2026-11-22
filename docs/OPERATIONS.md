@@ -21,6 +21,8 @@ The latter runs from a native Node host able to reach the app on `BASE` (default
 
 ## Upgrade with a rollback point
 
+Version 2.4.1 moves backend files to `src/` and the Dockerfile to `deploy/`. The updated Compose file handles these paths automatically. Native installations must also update their service entry point; see [native upgrade notes](NATIVE.md).
+
 Keep the current Git revision and image before pulling a reviewed release. The repository must be clean; preserve local configuration and any custom artwork separately.
 
 ```bash

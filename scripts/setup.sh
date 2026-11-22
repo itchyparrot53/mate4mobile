@@ -15,7 +15,7 @@ Usage: bash scripts/setup.sh [options]
   --db-user NAME      NEW reader role (default: mate4mobile_reader)
   --port NUMBER       Loopback HTTP port (default: 8099)
   --timezone ZONE     IANA timezone (default: Europe/London)
-  --currency CODE     ISO currency (default: GBP)
+  --currency CODE     GBP, EUR, USD or another ISO currency (default: GBP)
   --no-start          Configure and grant only; do not build/start the app
   --help              Show this help without making changes
 Run from a Linux host with Docker Compose v2 and access to the DB container.
@@ -46,6 +46,7 @@ if [[ -z "$container" || -z "$network" ]]; then
   [[ -n "$network" ]] || read -r -p 'Existing network listed above: ' network
   read -r -p "Database owner [$admin]: " answer; admin=${answer:-$admin}
 fi
+currency=${currency^^}
 dbhost=${dbhost:-$container}
 for identifier in "$dbname" "$admin" "$reader"; do [[ "$identifier" =~ ^[a-z_][a-z0-9_]{0,62}$ ]] || fail 'Database and role names must use lowercase SQL identifiers'; done
 for value in "$container" "$network" "$dbhost"; do [[ "$value" =~ ^[a-zA-Z0-9][a-zA-Z0-9_.-]*$ ]] || fail 'Invalid container, network or host name'; done

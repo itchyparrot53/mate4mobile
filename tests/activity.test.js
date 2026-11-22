@@ -1,7 +1,7 @@
 'use strict';
 const {test}=require('node:test');
 const assert=require('node:assert/strict');
-const {parseCursor,cursorFor,getActivity}=require('../activity');
+const {parseCursor,cursorFor,getActivity}=require('../src/activity');
 
 test('activity cursor preserves microseconds and the type/id tie breaker',()=>{
   const value={stamp:'2026-03-29T23:00:00.123456',type:'charge',id:5};

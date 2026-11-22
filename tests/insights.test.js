@@ -1,7 +1,7 @@
 'use strict';
 const {test}=require('node:test');
 const assert=require('node:assert/strict');
-const {sampleTelemetry,chargingTotals,getChargingStats}=require('../insights');
+const {sampleTelemetry,chargingTotals,getChargingStats}=require('../src/insights');
 const {layout}=require('../public/charts');
 
 test('time sampling retains actual endpoint SOC, short spikes, regeneration and boundaries',()=>{

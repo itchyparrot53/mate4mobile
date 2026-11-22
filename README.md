@@ -2,28 +2,19 @@
 
 <img src="brand/exports/social-card.png" alt="Mate4Mobile — Every mile, in view." width="100%">
 
-**Your private TeslaMate companion.**<br>
-Journeys, charging and battery history. Made for your phone.
+**Journeys, charging and battery history. Made for your phone.**
 
-[![Last commit](https://img.shields.io/github/last-commit/itchyparrot53/mate4mobile?style=for-the-badge&color=9ce6c5&labelColor=202223&logo=github&logoColor=white)](https://github.com/itchyparrot53/mate4mobile/commits/main/)
-[![Issues](https://img.shields.io/github/issues/itchyparrot53/mate4mobile?style=for-the-badge&color=9ce6c5&labelColor=202223&logo=github&logoColor=white)](https://github.com/itchyparrot53/mate4mobile/issues)
-[![Stars](https://img.shields.io/github/stars/itchyparrot53/mate4mobile?style=for-the-badge&color=9ce6c5&labelColor=202223&logo=github&logoColor=white)](https://github.com/itchyparrot53/mate4mobile/stargazers)
+[![Last commit](https://img.shields.io/github/last-commit/itchyparrot53/mate4mobile?style=flat&color=9ce6c5&labelColor=202223)](https://github.com/itchyparrot53/mate4mobile/commits/main/)
+[![Stars](https://img.shields.io/github/stars/itchyparrot53/mate4mobile?style=flat&color=9ce6c5&labelColor=202223)](https://github.com/itchyparrot53/mate4mobile/stargazers)
+[![Code licence: MIT](https://img.shields.io/badge/code-MIT-9ce6c5?style=flat&labelColor=202223)](LICENSE)
 
-[![Docker deployment](https://img.shields.io/badge/Docker-Deployment-9ce6c5?style=for-the-badge&labelColor=202223&logo=docker&logoColor=white)](docs/INSTALL.md)
-[![Node.js 22+](https://img.shields.io/badge/Node.js-22%2B-9ce6c5?style=for-the-badge&labelColor=202223&logo=nodedotjs&logoColor=white)](CONTRIBUTING.md)
-[![Code licence: MIT](https://img.shields.io/badge/Code_Licence-MIT-9ce6c5?style=for-the-badge&labelColor=202223)](LICENSE)
-
-[![Website](https://img.shields.io/badge/Website-202223?style=for-the-badge)](https://itchyparrot53.github.io/mate4mobile/)
-[![Try the demo](https://img.shields.io/badge/Try_the_Demo-9ce6c5?style=for-the-badge)](https://itchyparrot53.github.io/mate4mobile/demo/)
-[![Installation guide](https://img.shields.io/badge/Installation_Guide-202223?style=for-the-badge)](docs/INSTALL.md)
-
-[Features](#features) · [Screenshots](#screenshots) · [Getting started](#getting-started) · [FAQ](#faq) · [Documentation](#documentation)
+[Website](https://itchyparrot53.github.io/mate4mobile/) · **[Try the demo](https://itchyparrot53.github.io/mate4mobile/demo/)** · [Install](docs/INSTALL.md) · [Documentation](#documentation)
 
 </div>
 
 ---
 
-## ⚡ What is Mate4Mobile?
+## What is Mate4Mobile?
 
 TeslaMate records the story of your car. **Mate4Mobile makes it easy to read.**
 
@@ -35,7 +26,7 @@ Mate4Mobile is a **self-hosted, read-only viewer** for your existing TeslaMate d
 
 <a id="screenshots"></a>
 
-## 📱 A dashboard for every day
+## A dashboard for every day
 
 <p align="center">
   <img src="docs/images/app-mobile.jpg" alt="Vehicle overview showing the Tesla render, battery level and daily summary with synthetic data" width="280">
@@ -45,7 +36,7 @@ Mate4Mobile is a **self-hosted, read-only viewer** for your existing TeslaMate d
 <p align="center"><strong>A quick check before you leave. A clearer picture when you get back.</strong></p>
 
 <details>
-<summary><strong>🖥️ Explore the desktop view</strong></summary>
+<summary><strong>Explore the desktop view</strong></summary>
 
 Follow a recorded journey with a route map and linked speed, power and battery charts.
 
@@ -54,13 +45,13 @@ Follow a recorded journey with a route map and linked speed, power and battery c
 </details>
 
 <details>
-<summary><strong>🌐 Preview the project website</strong></summary>
+<summary><strong>Preview the project website</strong></summary>
 
 ![Mate4Mobile showcase website](docs/images/website-desktop.jpg)
 
 </details>
 
-*Screenshots and the public demo use invented data. Vehicle renders © Tesla, Inc. and/or their respective owners; used for identification and illustration. See [LEGAL.md](LEGAL.md).*
+*Screenshots and the public demo use invented data. Vehicle renders © Tesla, Inc. and/or their respective owners; used for identification and illustration. See [LEGAL.md](docs/legal/LEGAL.md).*
 
 **[Try the interactive demo →](https://itchyparrot53.github.io/mate4mobile/demo/)** No server, sign-in or vehicle connection needed.
 
@@ -68,7 +59,7 @@ Follow a recorded journey with a route map and linked speed, power and battery c
 
 <a id="features"></a>
 
-## ✨ Features
+## Features
 
 | View | What you get |
 | --- | --- |
@@ -83,7 +74,7 @@ Follow a recorded journey with a route map and linked speed, power and battery c
 
 <a id="getting-started"></a>
 
-## 🚀 Getting started
+## Getting started
 
 ### Before you start
 
@@ -107,7 +98,7 @@ The app initially listens on **host loopback port 8099**. Add your HTTPS reverse
 **[Complete installation guide](docs/INSTALL.md)** · **[HTTPS and Home Screen setup](docs/HTTPS.md)** · **[Native Node/systemd installation](docs/NATIVE.md)**
 
 <details>
-<summary><strong>⚙️ Setup with explicit container and network names</strong></summary>
+<summary><strong>Setup with explicit container and network names</strong></summary>
 
 ```bash
 bash scripts/setup.sh \
@@ -123,7 +114,7 @@ Replace the example container and network names with yours. Setup refuses to ove
 </details>
 
 <details>
-<summary><strong>🛠️ Install without Docker</strong></summary>
+<summary><strong>Install without Docker</strong></summary>
 
 Use the [native Node/systemd guide](docs/NATIVE.md) for an existing Linux host. It covers a dedicated app user, restricted database credentials, the service unit and a private HTTPS reverse proxy.
 
@@ -134,7 +125,7 @@ Use the [native Node/systemd guide](docs/NATIVE.md) for an existing Linux host. 
 
 ---
 
-## 🔗 How it fits
+## How it fits
 
 ```mermaid
 flowchart LR
@@ -149,7 +140,7 @@ flowchart LR
 
 ---
 
-## 🔒 Privacy & data
+## Privacy & data
 
 - The installer grants `SELECT` on ten named telemetry/configuration tables. It does **not** grant access to TeslaMate’s `tokens` table, all tables or future tables.
 - The backend uses read-only database transactions. The doctor checks effective grants, including privileges inherited through `PUBLIC`.
@@ -158,11 +149,13 @@ flowchart LR
 - There are no analytics scripts or external fonts. Opening a route map requests OpenStreetMap tiles and shares the requested map area and your network address with that provider.
 - Missing values remain missing. Recorded spend is separate from the current tariff. Battery capacity and full-range figures are estimates, not a battery diagnostic.
 
-Read the [security model](SECURITY.md), [data guide](docs/DATA.md) and [architecture](docs/ARCHITECTURE.md).
+Read the [security model](.github/SECURITY.md), [data guide](docs/DATA.md) and [architecture](docs/ARCHITECTURE.md).
 
 ---
 
-## 🎨 Make it yours
+## Make it yours
+
+Set `CURRENCY=GBP`, `EUR`, `USD` or another supported code in `.env` to use your currency throughout costs and tariffs. See [currency configuration](docs/CONFIGURATION.md#currency) for options and how to apply changes. Stored amounts are not converted.
 
 Choose a vehicle family, generation and paint in Preferences. Seven model/generation presets and 39 colour choices use the same Tesla renders as the app. Year ranges and representative trims are guides, not exact VIN configurations. Preferences and distance units stay on the device.
 
@@ -172,7 +165,7 @@ The [brand kit](brand/README.md) includes SVG masters, light/dark wordmarks, a c
 
 <a id="faq"></a>
 
-## 💬 Frequently asked questions
+## Frequently asked questions
 
 <details>
 <summary><strong>Does this replace TeslaMate or wake the car?</strong></summary>
@@ -220,7 +213,7 @@ The app keeps missing data visible rather than treating it as zero. Recorded cha
 
 <a id="documentation"></a>
 
-## 📚 Documentation
+## Documentation
 
 | Guide | What it covers |
 | --- | --- |
@@ -230,14 +223,14 @@ The app keeps missing data visible rather than treating it as zero. Recorded cha
 | [Troubleshooting](docs/TROUBLESHOOTING.md) | Diagnose startup, database and connection issues. |
 | [Operations](docs/OPERATIONS.md) | Upgrades, backups and removal. |
 | [Data guide](docs/DATA.md) · [Architecture](docs/ARCHITECTURE.md) | Understand the readings and how the app works. |
-| [Security](SECURITY.md) | Access controls, privacy and vulnerability reporting. |
+| [Security](.github/SECURITY.md) | Access controls, privacy and vulnerability reporting. |
 | [Publishing](docs/PUBLISHING.md) | GitHub Desktop and GitHub Pages setup. |
 | [Brand kit](brand/README.md) | Logos, icons, colours and usage guidance. |
-| [Release checklist](docs/RELEASE.md) · [Changelog](CHANGELOG.md) | Validation record and release history. |
+| [Release checklist](docs/RELEASE.md) · [Changelog](docs/CHANGELOG.md) | Validation record and release history. |
 
 ---
 
-## 🧑‍💻 Development
+## Development
 
 Node **22 or newer** is required; the container uses Node 24 LTS. The app is plain JavaScript and Node HTTP with PostgreSQL—no frontend framework or production build step.
 
@@ -248,10 +241,10 @@ npm run site
 npm run preview
 ```
 
-Open `http://localhost:4173/mate4mobile/` for the website and demo. A database is not needed for these commands. For the private app, supply your own restricted database credentials as described in [CONTRIBUTING.md](CONTRIBUTING.md).
+Open `http://localhost:4173/mate4mobile/` for the website and demo. A database is not needed for these commands. For the private app, supply your own restricted database credentials as described in [CONTRIBUTING.md](.github/CONTRIBUTING.md).
 
 <details>
-<summary><strong>⌨️ All development commands</strong></summary>
+<summary><strong>All development commands</strong></summary>
 
 | Command | Purpose |
 | --- | --- |
@@ -268,20 +261,20 @@ Open `http://localhost:4173/mate4mobile/` for the website and demo. A database i
 
 ---
 
-## 🤝 Contributing & project status
+## Contributing & project status
 
 An early public release, developed from a running personal installation. The public installer targets the standard single-database TeslaMate Docker layout. Native deployments are documented separately. Review the [validation record](docs/RELEASE.md) for what has actually been tested; unusual database schemas and proxy topologies may need configuration.
 
 Bug reports and focused improvements are welcome. Please use synthetic examples and remove locations, VINs and credentials before sharing an issue.
 
-Start with [CONTRIBUTING.md](CONTRIBUTING.md), [report a bug](https://github.com/itchyparrot53/mate4mobile/issues/new/choose) or open a pull request with a focused improvement.
+Start with [CONTRIBUTING.md](.github/CONTRIBUTING.md), [report a bug](https://github.com/itchyparrot53/mate4mobile/issues/new/choose) or open a pull request with a focused improvement.
 
 ---
 
-## 🙏 Credits & licence
+## Credits & licence
 
 Made possible by [TeslaMate](https://github.com/teslamate-org/teslamate), [Leaflet](https://leafletjs.com/), [OpenStreetMap](https://www.openstreetmap.org/copyright), [Inter](https://rsms.me/inter/) and [node-postgres](https://node-postgres.com/).
 
-Mate4Mobile code and original brand artwork are [MIT licensed](LICENSE). Tesla vehicle imagery is excluded from that licence; see [LEGAL.md](LEGAL.md). Bundled third-party components retain their own licences; see [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
+Mate4Mobile code and original brand artwork are [MIT licensed](LICENSE). Tesla vehicle imagery is excluded from that licence; see [LEGAL.md](docs/legal/LEGAL.md). Bundled third-party components retain their own licences; see [THIRD_PARTY_NOTICES.md](docs/legal/THIRD_PARTY_NOTICES.md).
 
 Mate4Mobile is independent and is not affiliated with, endorsed by or sponsored by Tesla, Inc. or the TeslaMate project. Tesla, Model 3, Model Y, Model S and Model X are trademarks of their respective owners.

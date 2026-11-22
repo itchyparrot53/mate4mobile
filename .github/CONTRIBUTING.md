@@ -10,7 +10,7 @@ For backend work, use your own disposable PostgreSQL fixture or a restricted rea
 
 ```bash
 node --env-file=.env scripts/doctor.cjs
-node --env-file=.env server.js
+node --env-file=.env src/server.js
 ```
 
 For localhost-only HTTP testing, set `HOST=127.0.0.1` and `COOKIE_SECURE=0`. Production stays behind HTTPS.
@@ -29,7 +29,7 @@ For UI changes, check 320px and 390px phones, a tablet-width layout and desktop.
 
 ## Design and data principles
 
-- Keep the interface vehicle-first and readable. Follow [the brand kit](brand/README.md).
+- Keep the interface vehicle-first and readable. Follow [the brand kit](../brand/README.md).
 - Keep missing values, zero and estimates distinct. Preserve timestamps and telemetry gaps.
 - Do not add Tesla API calls, vehicle wakeups, write queries or analytics without an explicit project-level design discussion.
 - Private APIs must never enter the service-worker cache. The public demo must never enter the production app.

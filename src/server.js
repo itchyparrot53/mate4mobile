@@ -6,6 +6,8 @@ const fsp = fs.promises;
 const path = require('path');
 const crypto = require('crypto');
 const { Pool, types } = require('pg');
+const { getCurrencyCode } = require('../public/money');
+const CURRENCY = getCurrencyCode(process.env.CURRENCY);
 const { thinPoints, cleanRoute, averagePower } = require('./lib');
 const { parseCursor, getActivity } = require('./activity');
 const {sampleTelemetry,getBatterySeries,getChargingStats}=require('./insights');
@@ -18,7 +20,7 @@ const PORT = parseInt(process.env.PORT || '8099', 10);
 const HOST = process.env.HOST || '127.0.0.1';
 const APP_PASS = process.env.APP_PASS || '';
 const APP_SECRET = process.env.APP_SECRET || '';
-const PUBLIC_DIR = path.join(__dirname, 'public');
+const PUBLIC_DIR = path.join(__dirname, '..', 'public');
 const CAR_ID = process.env.CAR_ID ? parseInt(process.env.CAR_ID, 10) : null;
 const COOKIE = process.env.SESSION_COOKIE || 'tm_session';
 
@@ -279,7 +281,7 @@ async function getSummary() {
       temperature: car.unit_of_temperature || 'C',
       preferredRange: preferred,
       timezone: process.env.TZ || 'Europe/London',
-      currency: process.env.CURRENCY || 'GBP'
+      currency: CURRENCY
     },
     status: {
       state: status,
@@ -775,7 +777,7 @@ const server = http.createServer(async (req, res) => {
     }
     if (pathname === '/healthz') {
       await pool.query('select 1');
-      return json(res, 200, { ok: true, version: '2.4.0', ts: new Date().toISOString() });
+      return json(res, 200, { ok: true, version: '2.4.1', ts: new Date().toISOString() });
     }
 
     if (pathname === '/api/login' && req.method === 'POST') {

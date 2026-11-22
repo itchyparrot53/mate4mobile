@@ -1,7 +1,12 @@
 # Changelog
 
-## Unreleased
+## 2.4.1 — Currency configuration and repository cleanup
 
+- Validated and normalized the environment currency, with consistent formatting across cost totals, tariffs, session fees and charts. Documented GBP, EUR, USD and other supported currencies; Preferences shows the configured code.
+- Preserved fractional-cent tariffs and currency-specific decimal places. No exchange-rate conversion is performed.
+- Moved backend modules into `src/`, Dockerfile into `deploy/`, legal/provenance files into `docs/legal/`, changelog into `docs/`, and contribution/security guidance into `.github/`.
+- Updated package entry points, native service, Docker build, integration tests, site packaging and documentation links for the new layout.
+- Simplified the README introduction and removed heading emojis.
 - Fixed the installer integration test racing PostgreSQL's temporary bootstrap server. Readiness now requires a successful query against the target database over TCP.
 - Added deliberately delayed database initialization to exercise that race on every installer test run.
 - Expanded installer validation to use the shipped Compose configuration, including database doctor, container health, authentication and Secure cookies, with isolated project/image names and a random loopback port.

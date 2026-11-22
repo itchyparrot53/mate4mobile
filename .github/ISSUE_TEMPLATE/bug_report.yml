@@ -3,7 +3,7 @@ description: Report a reproducible problem with sanitized details.
 body:
   - type: markdown
     attributes:
-      value: "Please remove credentials, VINs, home locations and real journey data. For vulnerabilities, follow SECURITY.md."
+      value: "Please remove credentials, VINs, home locations and real journey data. For vulnerabilities, follow .github/SECURITY.md."
   - type: textarea
     id: problem
     attributes:

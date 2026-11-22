@@ -1,11 +1,15 @@
 # Architecture
 
 ```text
-server.js            Node HTTP, authentication, static serving, read-only API
-activity.js          Combined cursor-based drive/charge timeline
-insights.js          Battery sampling and charging summaries
-lib.js               Route thinning and telemetry helpers
+src/server.js        Node HTTP, authentication, static serving, read-only API
+src/activity.js      Combined cursor-based drive/charge timeline
+src/insights.js      Battery sampling and charging summaries
+src/lib.js           Route thinning and telemetry helpers
 public/              Framework-free PWA, charts, appearance, local assets
+public/money.js      Shared currency validation and display formatting
+deploy/              Dockerfile, native service, reverse proxy and reader SQL
+docs/legal/          Vehicle attribution, third-party notices and provenance
+.github/             Workflows, issue template, contribution/security guidance
 scripts/setup.sh     Additive Docker installer and restricted reader grants
 scripts/doctor.cjs   Read-only connection/schema/privilege checks
 site/                Public presentation and synthetic demo adapter

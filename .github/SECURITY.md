@@ -4,7 +4,7 @@ Mate4Mobile is intended for a trusted household LAN or private VPN, behind trust
 
 ## Reporting a vulnerability
 
-Use GitHub’s **Report a vulnerability** option on the repository Security tab when private reporting is enabled. If it is unavailable, open a minimal issue requesting a private contact method; do not include exploit details, credentials or personal telemetry in public. The maintainer enables private reporting as part of the [publishing checklist](docs/PUBLISHING.md).
+Use GitHub’s **Report a vulnerability** option on the repository Security tab when private reporting is enabled. If it is unavailable, open a minimal issue requesting a private contact method; do not include exploit details, credentials or personal telemetry in public. The maintainer enables private reporting as part of the [publishing checklist](../docs/PUBLISHING.md).
 
 ## Boundaries
 

@@ -3,13 +3,15 @@ const fs=require('node:fs/promises'),path=require('node:path');
 const root=path.resolve(__dirname,'..'),out=path.join(root,'dist/site');
 (async()=>{
  await fs.mkdir(out,{recursive:true});
- await fs.copyFile(path.join(root,'LEGAL.md'),path.join(out,'LEGAL.md'));
- await fs.copyFile(path.join(root,'THIRD_PARTY_NOTICES.md'),path.join(out,'THIRD_PARTY_NOTICES.md'));
- await fs.copyFile(path.join(root,'VEHICLE-ASSETS.json'),path.join(out,'VEHICLE-ASSETS.json'));
+ await fs.copyFile(path.join(root,'docs/legal/LEGAL.md'),path.join(out,'LEGAL.md'));
+ await fs.copyFile(path.join(root,'docs/legal/THIRD_PARTY_NOTICES.md'),path.join(out,'THIRD_PARTY_NOTICES.md'));
+ await fs.copyFile(path.join(root,'docs/legal/VEHICLE-ASSETS.json'),path.join(out,'VEHICLE-ASSETS.json'));
  for(const file of ['index.html','style.css','site.js'])await fs.copyFile(path.join(root,'site',file),path.join(out,file));
  await fs.mkdir(path.join(out,'assets'),{recursive:true});
  for(const [src,dest] of [['brand/wordmark.svg','wordmark.svg'],['brand/mark.svg','mark.svg'],['public/favicon.svg','favicon.svg'],['brand/exports/social-card.png','social-card.png'],['public/assets/inter-latin.woff2','inter-latin.woff2'],['public/assets/INTER-LICENSE','INTER-LICENSE']])await fs.copyFile(path.join(root,src),path.join(out,'assets',dest));
  await fs.cp(path.join(root,'brand'),path.join(out,'brand'),{recursive:true});
+ const brandGuide=path.join(out,'brand/README.md');
+ await fs.writeFile(brandGuide,(await fs.readFile(brandGuide,'utf8')).replace('../docs/legal/LEGAL.md','../LEGAL.md'));
  await fs.cp(path.join(root,'public'),path.join(out,'demo'),{recursive:true});
  // The demo is an isolated build artifact. Runtime source has no demo bypass.
  async function rewrite(dir){for(const entry of await fs.readdir(dir,{withFileTypes:true})){const file=path.join(dir,entry.name);if(entry.isDirectory()){if(entry.name!=='vendor')await rewrite(file);continue;}if(!/\.(html|js|css|webmanifest)$/.test(file)||entry.name==='sw.js')continue;

@@ -1,7 +1,9 @@
 name: mate4mobile
 services:
   app:
-    build: .
+    build:
+      context: .
+      dockerfile: deploy/Dockerfile
     image: mate4mobile:local
     restart: unless-stopped
     init: true

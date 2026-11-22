@@ -17,6 +17,6 @@
 | Blank route tiles | Check access to `tile.openstreetmap.org`, its attribution and your browser/network policy. GPS samples may also be absent. |
 | Old Home Screen name/icon | Reopen online; if the OS retains old installation metadata, remove the shortcut and reinstall from the trusted HTTPS URL. |
 | Demo works but private app does not | The demo is synthetic and has no database. Run the doctor, health and endpoint checks on the private installation. |
-| Native app ignores `.env` | Use systemd’s `EnvironmentFile` or `node --env-file=.env server.js`. Plain `npm start` does not load it. |
+| Native app ignores `.env` | Use systemd’s `EnvironmentFile` or `node --env-file=.env src/server.js`. Plain `npm start` does not load it. |
 
 When asking for help, include the app version, TeslaMate/PostgreSQL versions, deployment type and sanitized error message. Never post `.env`, auth cookies, private IP/hostnames you do not want shared, VINs, home addresses, database dumps or real route screenshots.

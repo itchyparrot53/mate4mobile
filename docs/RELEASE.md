@@ -2,11 +2,11 @@
 
 ## Preparing a release
 
-1. Update `package.json`, the lockfile, `/healthz` version, Preferences version text and `CHANGELOG.md`.
+1. Update `package.json`, the lockfile, `/healthz` version, Preferences version text and `docs/CHANGELOG.md`.
 2. Change the service-worker cache key whenever any shell asset changes. Keep its `tm-mobile` prefix for cleanup compatibility and never add an API endpoint to the shell.
 3. Run `npm ci`, `npm test`, `npm run site`, `npm run check` and, for deployment/security changes, `npm run test:install`.
 4. Check website/demo at the **project subpath**, narrow/mobile/tablet/desktop layouts, keyboard focus, touch targets and reduced motion. Try a drive, charge, appearance choice and unit change.
-5. Use only synthetic screenshots for README/site. Inspect the staged file list and diffs for private source artifacts, credentials, routes and third-party asset rights and attribution. Tesla vehicle imagery is explicitly excluded from MIT and documented in LEGAL.md.
+5. Use only synthetic screenshots for README/site. Inspect the staged file list and diffs for private source artifacts, credentials, routes and third-party asset rights and attribution. Tesla vehicle imagery is explicitly excluded from MIT and documented in docs/legal/LEGAL.md.
 6. Upgrade a private test installation with rollback available. Check trusted HTTPS health, login, APIs and shell/manifest updates. Verify the existing logger has not restarted.
 7. Publish only after reviewing the concrete repository. Enable Pages and verify its real published URL separately; local testing is not proof of remote deployment.
 

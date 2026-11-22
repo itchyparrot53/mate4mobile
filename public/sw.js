@@ -1,7 +1,7 @@
 'use strict';
 // The release installer stamps this value. Private API responses are NEVER cached.
-const CACHE = 'tm-mobile-m4m-2.4.0-tesla-assets';
-const SHELL = ['/', '/styles.css', '/app.js', '/charts.js', '/vehicle-catalog.js', '/appearance.js', '/manifest.webmanifest', '/assets/model-3.png', '/assets/inter-latin.woff2', '/brand-mark.svg', '/brand-wordmark.svg', '/favicon.svg', '/apple-touch-icon.png', '/icon-192.png', '/icon-512.png'];
+const CACHE = 'tm-mobile-m4m-2.4.1-currency';
+const SHELL = ['/', '/styles.css', '/app.js','/money.js', '/charts.js', '/vehicle-catalog.js', '/appearance.js', '/manifest.webmanifest', '/assets/model-3.png', '/assets/inter-latin.woff2', '/brand-mark.svg', '/brand-wordmark.svg', '/favicon.svg', '/apple-touch-icon.png', '/icon-192.png', '/icon-512.png'];
 self.addEventListener('install', event => {
   event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(SHELL)).then(() => self.skipWaiting()));
 });

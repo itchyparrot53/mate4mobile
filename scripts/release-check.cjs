@@ -26,7 +26,7 @@ const publicFiles=walk(path.join(root,'public'));assert.ok(publicFiles.every(f=>
 const prod=fs.readFileSync(path.join(root,'public/app.js'),'utf8');assert.ok(!prod.includes("if(false && 'serviceWorker'"));
 const site=path.join(root,'dist/site');assert.ok(fs.existsSync(path.join(site,'index.html')),'Run npm run site first');
 const demo=fs.readFileSync(path.join(site,'demo/app.js'),'utf8');assert.ok(demo.includes("if(false && 'serviceWorker'"));assert.ok(!fs.existsSync(path.join(site,'demo/sw.js')));assert.ok(!fs.existsSync(path.join(site,'demo/manifest.webmanifest')));
-assert.ok(demo.includes("'/kWh'"),'Subpath build must not rewrite measurement units');
+assert.ok(fs.readFileSync(path.join(site,'demo/money.js'),'utf8').includes("'/kWh'"),'Subpath build must not rewrite measurement units');
 for(const file of walk(site)){if(!/\.(html|css)$/.test(file))continue;const text=fs.readFileSync(file,'utf8');
  for(const match of text.matchAll(/(?:\b(?:src|href)=["']|url\(["']?)([^"'\s)<>]+)["')]/g)){
   const target=match[1].split('#')[0].split('?')[0];if(!target||/^(?:https?:|data:|mailto:|#)/.test(target))continue;
@@ -35,9 +35,9 @@ for(const file of walk(site)){if(!/\.(html|css)$/.test(file))continue;const text
   assert.ok(fs.existsSync(resolved),`Missing site asset/link: ${target} in ${path.relative(site,file)}`);count++;
  }
 }
-assert.ok(fs.existsSync(path.join(root,'LEGAL.md')),'Vehicle rights notice is required');
-assert.ok(fs.existsSync(path.join(root,'VEHICLE-ASSETS.json')),'Vehicle provenance is required');
-const provenance=JSON.parse(fs.readFileSync(path.join(root,'VEHICLE-ASSETS.json'),'utf8'));
+assert.ok(fs.existsSync(path.join(root,'docs/legal/LEGAL.md')),'Vehicle rights notice is required');
+assert.ok(fs.existsSync(path.join(root,'docs/legal/VEHICLE-ASSETS.json')),'Vehicle provenance is required');
+const provenance=JSON.parse(fs.readFileSync(path.join(root,'docs/legal/VEHICLE-ASSETS.json'),'utf8'));
 for(const asset of provenance.assets){
  const bytes=fs.readFileSync(path.join(root,'public',asset.src));
  assert.equal(require('node:crypto').createHash('sha256').update(bytes).digest('hex'),asset.sha256,`Vehicle render changed: ${asset.src}`);

@@ -12,8 +12,8 @@ Example service installation after preparing those files:
 ```bash
 sudo useradd --system --home /opt/mate4mobile --shell /usr/sbin/nologin mate4mobile
 sudo install -d -m 750 -o root -g mate4mobile /opt/mate4mobile
-sudo cp server.js lib.js activity.js insights.js package.json package-lock.json /opt/mate4mobile/
-sudo cp -R public node_modules scripts /opt/mate4mobile/
+sudo cp package.json package-lock.json /opt/mate4mobile/
+sudo cp -R src public node_modules scripts /opt/mate4mobile/
 sudo install -m 640 -o root -g mate4mobile .env /opt/mate4mobile/.env
 sudo chown -R root:mate4mobile /opt/mate4mobile
 sudo chmod -R o-rwx /opt/mate4mobile
@@ -28,3 +28,5 @@ These commands assume `/usr/bin/node`; check `command -v node` and adjust `ExecS
 Configure your trusted HTTPS proxy using [HTTPS.md](HTTPS.md), then test the real API using `scripts/smoke.cjs` with the same environment and `BASE` set to the loopback address. It does not change database rows. The smoke script’s test client handles its cookie directly; production browser logins still require HTTPS.
 
 For upgrades, stage a separate directory, preserve `.env`, run the doctor/tests, keep the previous app directory and unit as a rollback checkpoint, then restart **only `mate4mobile`**. Verify `/healthz` and a real login before removing any checkpoint. Existing personal deployments named `tm-mobile` can keep that service name and configuration; do not install a second instance on the same port.
+
+When upgrading from 2.4.0, copy the new `src/` directory and update the service’s `ExecStart` to `/usr/bin/node /opt/mate4mobile/src/server.js`. Reinstall the supplied unit and run `sudo systemctl daemon-reload` before restarting the companion. Keep the previous directory and unit for rollback.

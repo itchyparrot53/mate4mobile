@@ -12,6 +12,6 @@ Mate4Mobile displays TeslaMate records. It does not poll Tesla, wake the car, re
 - **Battery estimates:** Full rated range and inferred capacity depend on recorded range/charging and conditions. A “longer-term picture” label uses a UI heuristic of at least 14 days and five qualifying charges; it is not a health certification or degradation diagnosis.
 - **Consumption:** Availability depends on TeslaMate’s own efficiency calibration. The viewer avoids presenting unsupported consumption values when that calibration is absent.
 - **Currency:** A formatting setting only. It must match the units of stored costs; no exchange-rate conversion is performed.
-- **Vehicle artwork:** A device-local display preference, not an automatic identification of exact trim or model year. Vehicle renders are Tesla artwork used for identification and illustration; see [LEGAL.md](../LEGAL.md).
+- **Vehicle artwork:** A device-local display preference, not an automatic identification of exact trim or model year. Vehicle renders are Tesla artwork used for identification and illustration; see [LEGAL.md](legal/LEGAL.md).
 
 One configured car is shown per app instance. The default is the first car by ID; set `CAR_ID` explicitly for a multi-car database. The public synthetic demo has no connection to actual telemetry.

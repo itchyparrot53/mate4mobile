@@ -38,11 +38,12 @@ const sleep=ms=>new Promise(r=>setTimeout(r,ms));
   }
   console.log('Fixture PostgreSQL is accepting queries over TCP.');
   sql(`CREATE TABLE cars(id integer); CREATE TABLE settings(id integer); CREATE TABLE states(id integer); CREATE TABLE positions(id integer,battery_level integer,usable_battery_level integer,drive_id integer,power integer,speed integer,date timestamp); CREATE TABLE drives(id integer); CREATE TABLE charging_processes(id integer,charge_energy_added numeric,charge_energy_used numeric,start_battery_level integer,end_battery_level integer,cost numeric); CREATE TABLE charges(id integer); CREATE TABLE updates(id integer); CREATE TABLE addresses(id integer); CREATE TABLE geofences(id integer,cost_per_unit numeric,session_fee numeric,billing_type text); CREATE TABLE tokens(id integer,secret text); INSERT INTO tokens VALUES(1,'synthetic-not-a-real-token');`);
-  for(const name of ['scripts','public','Dockerfile','compose.yml','.dockerignore','package.json','package-lock.json','server.js','activity.js','insights.js','lib.js'])await fs.cp(path.join(root,name),path.join(tmp,name),{recursive:true});
+  for(const name of ['scripts','public','src','deploy','compose.yml','.dockerignore','package.json','package-lock.json'])await fs.cp(path.join(root,name),path.join(tmp,name),{recursive:true});
   console.log('Testing setup against an isolated PostgreSQL 17 container…');
-  const setup=['scripts/setup.sh','--container',id,'--network',network,'--db-admin','postgres','--no-start'];
+  const setup=['scripts/setup.sh','--container',id,'--network',network,'--db-admin','postgres','--currency','eur','--no-start'];
   run(bash,setup,{cwd:tmp});
   const envBefore=await fs.readFile(path.join(tmp,'.env'));
+  if(!/^CURRENCY=EUR$/m.test(envBefore.toString()))throw new Error('Setup did not normalize the selected currency');
   const rerun=spawnSync(bash,setup,{cwd:tmp,encoding:'utf8'});if(rerun.status===0)throw new Error('Setup must refuse to overwrite .env');
   if(!envBefore.equals(await fs.readFile(path.join(tmp,'.env'))))throw new Error('Rerun changed credentials');
   if(sql("SELECT has_table_privilege('mate4mobile_reader','tokens','SELECT')")!=='f')throw new Error('Reader can access tokens');
@@ -57,6 +58,7 @@ const sleep=ms=>new Promise(r=>setTimeout(r,ms));
   compose(['run','--rm','--no-deps','app','node','scripts/doctor.cjs']);
   compose(['up','-d','--wait','--wait-timeout','90','app']);
   const appId=compose(['ps','-q','app']);
+  if(run('docker',['exec',appId,'node','-e',"console.log(require('./public/money').getCurrencyCode(process.env.CURRENCY))"])!=='EUR')throw new Error('Currency did not reach the deployed app');
   const address=run('docker',['port',appId,'8099/tcp']),base='http://'+address;
   let healthy=false;for(let i=0;i<40;i++){try{if((await fetch(base+'/healthz',{signal:AbortSignal.timeout(1500)})).ok){healthy=true;break;}}catch{}await sleep(500);}if(!healthy){console.error(run('docker',['logs','--tail','15',appId]));console.error(run('docker',['inspect','--format','{{json .NetworkSettings.Ports}}',appId]));throw new Error('Image health check failed');}
   if((await fetch(base+'/api/summary',{signal:AbortSignal.timeout(10000)})).status!==401)throw new Error('Authentication boundary failed');

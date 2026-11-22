@@ -14,7 +14,7 @@ git status --short
 git ls-files
 ```
 
-Confirm the file list contains no `.env`, private keys, certificates, database exports, local production screenshots or route logs. The automated content check catches common artifacts but does not replace reviewing the staged files. Read `LICENSE`, `THIRD_PARTY_NOTICES.md` and `SECURITY.md`.
+Confirm the file list contains no `.env`, private keys, certificates, database exports, local production screenshots or route logs. The automated content check catches common artifacts but does not replace reviewing the staged files. Read `LICENSE`, `docs/legal/THIRD_PARTY_NOTICES.md` and `.github/SECURITY.md`.
 
 ## Publish using GitHub Desktop on your PC
 

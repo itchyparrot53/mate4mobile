@@ -66,4 +66,4 @@ Write plainly: “Last recorded 12 minutes ago”, “Costs recorded for 8 of 9 
 
 ## Distribution
 
-Original Mate4Mobile identity assets use the repository’s MIT licence. Tesla vehicle imagery is separate and excluded; see the project’s LEGAL.md. Inter retains its own font licence in `fonts/INTER-LICENSE`. Keep third-party credits and the independence notice. Brand assets do not grant any rights to Tesla trademarks or imply endorsement.
+Original Mate4Mobile identity assets use the repository’s MIT licence. Tesla vehicle imagery is separate and excluded; see [the project’s legal notice](../docs/legal/LEGAL.md). Inter retains its own font licence in `fonts/INTER-LICENSE`. Keep third-party credits and the independence notice. Brand assets do not grant any rights to Tesla trademarks or imply endorsement.

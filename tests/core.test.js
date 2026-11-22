@@ -1,7 +1,7 @@
 'use strict';
 const {test} = require('node:test');
 const assert = require('node:assert/strict');
-const {cleanRoute,thinPoints,averagePower} = require('../lib');
+const {cleanRoute,thinPoints,averagePower} = require('../src/lib');
 
 test('route removes invalid coordinates, stays within 250 and preserves endpoints',()=>{
   const input=[{lat:null,lng:0},{lat:95,lng:0},...Array.from({length:501},(_,i)=>({lat:51+i/10000,lng:-.2-i/10000})),{lat:0,lng:NaN}];
