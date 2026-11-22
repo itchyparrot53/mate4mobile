@@ -1,0 +1,9 @@
+# Host-installed Caddy, same host as the app's loopback port.
+# Replace the hostname. Configure your LAN DNS and trust Caddy's CA on each device.
+mate4mobile.home.arpa {
+    tls internal
+    encode zstd gzip
+    reverse_proxy 127.0.0.1:8099
+}
+# For a hostname with a publicly trusted certificate, see docs/HTTPS.md.
+# Keep access private with your existing VPN or firewall. Do not expose port 8099.

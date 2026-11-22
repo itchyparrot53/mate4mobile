@@ -1,0 +1,32 @@
+{
+  "name": "mate4mobile",
+  "version": "2.4.0",
+  "private": true,
+  "description": "Every mile, in view. A private, mobile-first TeslaMate companion.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test tests/*.test.js",
+    "brand": "node scripts/build-brand.cjs",
+    "site": "node scripts/build-site.cjs",
+    "preview": "node scripts/preview.cjs",
+    "check": "node scripts/release-check.cjs",
+    "doctor": "node scripts/doctor.cjs",
+    "test:install": "node scripts/test-install.cjs"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "pg": "^8.13.1"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "fontkit": "^3.0.0",
+    "sharp": "^0.35.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/itchyparrot53/mate4mobile.git"
+  }
+}

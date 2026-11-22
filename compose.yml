@@ -1,0 +1,28 @@
+name: mate4mobile
+services:
+  app:
+    build: .
+    image: mate4mobile:local
+    restart: unless-stopped
+    init: true
+    env_file: .env
+    environment:
+      HOST: 0.0.0.0
+      PORT: 8099
+      COOKIE_SECURE: ${COOKIE_SECURE:-1}
+    ports:
+      - "${BIND_ADDRESS:-127.0.0.1}:${HTTP_PORT:-8099}:8099"
+    networks: [teslamate]
+    read_only: true
+    tmpfs: [/tmp]
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    logging:
+      driver: json-file
+      options:
+        max-size: 5m
+        max-file: "3"
+networks:
+  teslamate:
+    external: true
+    name: ${TESLAMATE_NETWORK:?Set TESLAMATE_NETWORK in .env}

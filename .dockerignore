@@ -1,0 +1,10 @@
+**
+!package.json
+!package-lock.json
+!server.js
+!lib.js
+!activity.js
+!insights.js
+!public/**
+!scripts/
+!scripts/doctor.cjs

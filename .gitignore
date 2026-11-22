@@ -1,0 +1,17 @@
+node_modules/
+.env
+.env.*
+!.env.example
+dist/
+*.log
+*.pem
+*.key
+*.crt
+*.sql.gz
+*.dump
+*.bak
+.DS_Store
+Thumbs.db
+coverage/
+private/
+.setup.lock/

@@ -1,0 +1,823 @@
+{
+  "verifiedAt": "2026-11-22T03:28:05.087697+00:00",
+  "source": "Official Tesla public image compositor",
+  "discoveryReference": "https://github.com/tn9design/tesla-vehicle-config-decoder",
+  "notes": [
+    "Downloaded PNG bytes are unchanged. CSS performs the crop.",
+    "Generation year ranges describe exterior appearance and are approximate across markets.",
+    "Paint swatch hex colours are illustrative, not official colour specifications.",
+    "Configurations use one representative factory wheel/interior per generation; these are appearance previews, not exact VIN configurations.",
+    "HTTP image/png, 1440x810 dimensions, transparency and unique SHA256 hashes verified for every appearance.",
+    "No open-content licence is claimed; source artwork is Tesla property.",
+    "All 39 appearances visually inspected in a contact sheet; body generations, paint differences and CSS crop framing verified."
+  ],
+  "models": [
+    {
+      "id": "m3-chrome",
+      "label": "Model 3 · Original chrome trim",
+      "generation": "Original design · 2017–2020",
+      "cropPixels": {
+        "x": 79,
+        "y": 173,
+        "width": 1160,
+        "height": 495.1219512195122
+      },
+      "cropCSS": {
+        "width": 124.137931,
+        "left": -6.810345,
+        "top": -34.940887
+      },
+      "config": {
+        "base": "https://static-assets.tesla.com/configurator/compositor",
+        "model": "m3",
+        "view": "STUD_3QTR",
+        "optionsTemplate": "$MT310,{paint},$W38B,$IN3PB",
+        "extra": {
+          "version": "0.0.25"
+        }
+      }
+    },
+    {
+      "id": "m3-black-trim",
+      "label": "Model 3 · Black trim",
+      "generation": "Original design · 2021–2023",
+      "cropPixels": {
+        "x": 320,
+        "y": 240,
+        "width": 820,
+        "height": 350.0
+      },
+      "cropCSS": {
+        "width": 175.609756,
+        "left": -39.02439,
+        "top": -68.571429
+      },
+      "config": {
+        "base": "https://static-assets.tesla.com/configurator/compositor",
+        "model": "m3",
+        "view": "STUD_3QTR",
+        "optionsTemplate": "$APFS,$DV2W,$IBB1,{paint},$PRM30,$SC04,$MDL3,$W40B,$MT322,$CPF0,$RSF1,$CW03",
+        "extra": {
+          "context": "design_studio_2"
+        }
+      }
+    },
+    {
+      "id": "m3-refresh",
+      "label": "Model 3 · Refreshed",
+      "generation": "Refreshed design · 2024 onwards",
+      "cropPixels": {
+        "x": 320,
+        "y": 240,
+        "width": 820,
+        "height": 350.0
+      },
+      "cropCSS": {
+        "width": 175.609756,
+        "left": -39.02439,
+        "top": -68.571429
+      },
+      "config": {
+        "base": "https://static-assets.tesla.com/configurator/compositor",
+        "model": "m3",
+        "view": "STUD_FRONT34",
+        "optionsTemplate": "$MT369,{paint},$W38A,$IPB2",
+        "extra": {
+          "context": "design_studio_2",
+          "crop": "0,0,0,0",
+          "overlay": "0"
+        }
+      }
+    },
+    {
+      "id": "my-original",
+      "label": "Model Y · Original",
+      "generation": "Original design · 2020–2024",
+      "cropPixels": {
+        "x": 280,
+        "y": 205,
+        "width": 880,
+        "height": 375.609756097561
+      },
+      "cropCSS": {
+        "width": 163.636364,
+        "left": -31.818182,
+        "top": -54.577922
+      },
+      "config": {
+        "base": "https://static-assets.tesla.com/v1/compositor/",
+        "model": "my",
+        "view": "STUD_3QTR",
+        "optionsTemplate": "$MTY09,{paint},$WY19B,$INPB0",
+        "extra": {}
+      }
+    },
+    {
+      "id": "my-refresh",
+      "label": "Model Y · Refreshed",
+      "generation": "Refreshed design · 2025 onwards",
+      "cropPixels": {
+        "x": 280,
+        "y": 204,
+        "width": 890,
+        "height": 379.8780487804878
+      },
+      "cropCSS": {
+        "width": 161.797753,
+        "left": -31.460674,
+        "top": -53.701445
+      },
+      "config": {
+        "base": "https://static-assets.tesla.com/configurator/compositor",
+        "model": "my",
+        "view": "FRONT34",
+        "optionsTemplate": "$MTY60,{paint},$WY19P,$IPB12",
+        "extra": {
+          "context": "design_studio_2",
+          "crop": "0,0,0,0",
+          "overlay": "0"
+        }
+      }
+    },
+    {
+      "id": "ms-modern",
+      "label": "Model S · Modern",
+      "generation": "Current exterior design",
+      "cropPixels": {
+        "x": 284,
+        "y": 240,
+        "width": 870,
+        "height": 371.3414634146341
+      },
+      "cropCSS": {
+        "width": 165.517241,
+        "left": -32.643678,
+        "top": -64.630542
+      },
+      "config": {
+        "base": "https://static-assets.tesla.com/configurator/compositor",
+        "model": "ms",
+        "view": "FRONT34",
+        "optionsTemplate": "$MTS22,{paint},$WS93,$IBE01",
+        "extra": {
+          "context": "design_studio_2",
+          "crop": "0,0,0,0",
+          "overlay": "0"
+        }
+      }
+    },
+    {
+      "id": "mx-modern",
+      "label": "Model X · Modern",
+      "generation": "Current exterior design",
+      "cropPixels": {
+        "x": 270,
+        "y": 202,
+        "width": 900,
+        "height": 384.1463414634146
+      },
+      "cropCSS": {
+        "width": 160.0,
+        "left": -30.0,
+        "top": -52.584127
+      },
+      "config": {
+        "base": "https://static-assets.tesla.com/configurator/compositor",
+        "model": "mx",
+        "view": "FRONT34",
+        "optionsTemplate": "$MDLX,$MTX22,{paint},$WX02,$STY5S,$IBE01",
+        "extra": {
+          "context": "design_studio_2",
+          "crop": "0,0,0,0",
+          "overlay": "0"
+        }
+      }
+    }
+  ],
+  "assets": [
+    {
+      "id": "m3-chrome",
+      "code": "PBSB",
+      "label": "Solid Black",
+      "hex": "#171819",
+      "src": "/assets/vehicles/m3-chrome-PBSB.png",
+      "sourceUrl": "https://static-assets.tesla.com/configurator/compositor?options=%24MT310%2C%24PBSB%2C%24W38B%2C%24IN3PB&view=STUD_3QTR&model=m3&size=1440&bkba_opt=1&version=0.0.25",
+      "sha256": "0086932afcdadf81759332307dc79376547b619fdf2394a2b077e3fac2018bfa",
+      "bytes": 593443,
+      "dimensions": [
+        1440,
+        810
+      ],
+      "transparent": true,
+      "visualVerified": true
+    },
+    {
+      "id": "m3-chrome",
+      "code": "PPSW",
+      "label": "Pearl White Multi-Coat",
+      "hex": "#efefec",
+      "src": "/assets/vehicles/m3-chrome-PPSW.png",
+      "sourceUrl": "https://static-assets.tesla.com/configurator/compositor?options=%24MT310%2C%24PPSW%2C%24W38B%2C%24IN3PB&view=STUD_3QTR&model=m3&size=1440&bkba_opt=1&version=0.0.25",
+      "sha256": "7e0f29bf40539595096c7ec543d907d31bea1114f25fdc18d59abfc67c5e15ff",
+      "bytes": 619964,
+      "dimensions": [
+        1440,
+        810
+      ],
+      "transparent": true,
+      "visualVerified": true
+    },
+    {
+      "id": "m3-chrome",
+      "code": "PMNG",
+      "label": "Midnight Silver Metallic",
+      "hex": "#54565b",
+      "src": "/assets/vehicles/m3-chrome-PMNG.png",
+      "sourceUrl": "https://static-assets.tesla.com/configurator/compositor?options=%24MT310%2C%24PMNG%2C%24W38B%2C%24IN3PB&view=STUD_3QTR&model=m3&size=1440&bkba_opt=1&version=0.0.25",
+      "sha256": "d8f2f5f50f6b3b4fc1c3ef380034790dd01d755174e8d590a91e888694896047",
+      "bytes": 623469,
+      "dimensions": [
+        1440,
+        810
+      ],
+      "transparent": true,
+      "visualVerified": true
+    },
+    {
+      "id": "m3-chrome",
+      "code": "PPSB",
+      "label": "Deep Blue Metallic",
+      "hex": "#17345d",
+      "src": "/assets/vehicles/m3-chrome-PPSB.png",
+      "sourceUrl": "https://static-assets.tesla.com/configurator/compositor?options=%24MT310%2C%24PPSB%2C%24W38B%2C%24IN3PB&view=STUD_3QTR&model=m3&size=1440&bkba_opt=1&version=0.0.25",
+      "sha256": "b3c0180e8b1849fb8b113fc40e0af50a26e8e555613e121b3327ed86133ab64f",
+      "bytes": 625484,
+      "dimensions": [
+        1440,
+        810
+      ],
+      "transparent": true,
+      "visualVerified": true
+    },
+    {
+      "id": "m3-chrome",
+      "code": "PPMR",
+      "label": "Red Multi-Coat",
+      "hex": "#8a1018",
+      "src": "/assets/vehicles/m3-chrome-PPMR.png",
+      "sourceUrl": "https://static-assets.tesla.com/configurator/compositor?options=%24MT310%2C%24PPMR%2C%24W38B%2C%24IN3PB&view=STUD_3QTR&model=m3&size=1440&bkba_opt=1&version=0.0.25",
+      "sha256": "ce0189d40e1ae0b3b846752aa0df876ac08071aa4e0ea0e87bd5804a4b515d70",
+      "bytes": 626549,
+      "dimensions": [
+        1440,
+        810
+      ],
+      "transparent": true,
+      "visualVerified": true
+    },
+    {
+      "id": "m3-black-trim",
+      "code": "PBSB",
+      "label": "Solid Black",
+      "hex": "#171819",
+      "src": "/assets/vehicles/m3-black-trim-PBSB.png",
+      "sourceUrl": "https://static-assets.tesla.com/configurator/compositor?options=%24APFS%2C%24DV2W%2C%24IBB1%2C%24PBSB%2C%24PRM30%2C%24SC04%2C%24MDL3%2C%24W40B%2C%24MT322%2C%24CPF0%2C%24RSF1%2C%24CW03&view=STUD_3QTR&model=m3&size=1440&bkba_opt=1&context=design_studio_2",
+      "sha256": "b93e586ba4924527cc4c31f6b7982a3dddacd80e5144a83ca8b9b0576d200d52",
+      "bytes": 75620,
+      "dimensions": [
+        1440,
+        810
+      ],
+      "transparent": true,
+      "visualVerified": true
+    },
+    {
+      "id": "m3-black-trim",
+      "code": "PPSW",
+      "label": "Pearl White Multi-Coat",
+      "hex": "#efefec",
+      "src": "/assets/vehicles/m3-black-trim-PPSW.png",
+      "sourceUrl": "https://static-assets.tesla.com/configurator/compositor?options=%24APFS%2C%24DV2W%2C%24IBB1%2C%24PPSW%2C%24PRM30%2C%24SC04%2C%24MDL3%2C%24W40B%2C%24MT322%2C%24CPF0%2C%24RSF1%2C%24CW03&view=STUD_3QTR&model=m3&size=1440&bkba_opt=1&context=design_studio_2",
+      "sha256": "ed22cc8ae6a8f85ba41d9009086764ec388663524a3763ec05a4f008ff919eca",
+      "bytes": 69973,
+      "dimensions": [
+        1440,
+        810
+      ],
+      "transparent": true,
+      "visualVerified": true
+    },
+    {
+      "id": "m3-black-trim",
+      "code": "PMNG",
+      "label": "Midnight Silver Metallic",
+      "hex": "#54565b",
+      "src": "/assets/vehicles/m3-black-trim-PMNG.png",
+      "sourceUrl": "https://static-assets.tesla.com/configurator/compositor?options=%24APFS%2C%24DV2W%2C%24IBB1%2C%24PMNG%2C%24PRM30%2C%24SC04%2C%24MDL3%2C%24W40B%2C%24MT322%2C%24CPF0%2C%24RSF1%2C%24CW03&view=STUD_3QTR&model=m3&size=1440&bkba_opt=1&context=design_studio_2",
+      "sha256": "79c802b20e66246be47af36f90cbaa9528b72dd3e9713bac4d2256e431ba3c02",
+      "bytes": 76606,
+      "dimensions": [
+        1440,
+        810
+      ],
+      "transparent": true,
+      "visualVerified": true
+    },
+    {
+      "id": "m3-black-trim",
+      "code": "PPSB",
+      "label": "Deep Blue Metallic",
+      "hex": "#17345d",
+      "src": "/assets/vehicles/m3-black-trim-PPSB.png",
+      "sourceUrl": "https://static-assets.tesla.com/configurator/compositor?options=%24APFS%2C%24DV2W%2C%24IBB1%2C%24PPSB%2C%24PRM30%2C%24SC04%2C%24MDL3%2C%24W40B%2C%24MT322%2C%24CPF0%2C%24RSF1%2C%24CW03&view=STUD_3QTR&model=m3&size=1440&bkba_opt=1&context=design_studio_2",
+      "sha256": "a60b4125bfc1c022f40376bdde3facc8a5643f1d22c0723e625013f906890731",
+      "bytes": 78499,
+      "dimensions": [
+        1440,
+        810
+      ],
+      "transparent": true,
+      "visualVerified": true
+    },
+    {
+      "id": "m3-black-trim",
+      "code": "PPMR",
+      "label": "Red Multi-Coat",
+      "hex": "#8a1018",
+      "src": "/assets/vehicles/m3-black-trim-PPMR.png",
+      "sourceUrl": "https://static-assets.tesla.com/configurator/compositor?options=%24APFS%2C%24DV2W%2C%24IBB1%2C%24PPMR%2C%24PRM30%2C%24SC04%2C%24MDL3%2C%24W40B%2C%24MT322%2C%24CPF0%2C%24RSF1%2C%24CW03&view=STUD_3QTR&model=m3&size=1440&bkba_opt=1&context=design_studio_2",
+      "sha256": "22cbafb790d95df882ee8f8ab763905ca9f0e5ee9d59d7c7aae2444b54ff6e0f",
+      "bytes": 76649,
+      "dimensions": [
+        1440,
+        810
+      ],
+      "transparent": true,
+      "visualVerified": true
+    },
+    {
+      "id": "m3-refresh",
+      "code": "PBSB",
+      "label": "Solid Black",
+      "hex": "#171819",
+      "src": "/assets/model-3.png",
+      "sourceUrl": "https://static-assets.tesla.com/configurator/compositor?model=m3&view=STUD_3QTR&size=1440&options=APBS,IPB2,PBSB,SC04,MDL3,W38A,MT369,CPF0&bkba_opt=1&crop=0,0,0,0&context=design_studio_2",
+      "sha256": "f41624c2befba869b01eb0047fd65c9f240bbc7944078de5fc94e8c23d4d495b",
+      "bytes": 220018,
+      "dimensions": [
+        1440,
+        810
+      ],
+      "transparent": true,
+      "visualVerified": true
+    },
+    {
+      "id": "m3-refresh",
+      "code": "PPSW",
+      "label": "Pearl White Multi-Coat",
+      "hex": "#efefec",
+      "src": "/assets/vehicles/m3-refresh-PPSW.png",
+      "sourceUrl": "https://static-assets.tesla.com/configurator/compositor?options=%24MT369%2C%24PPSW%2C%24W38A%2C%24IPB2&view=STUD_FRONT34&model=m3&size=1440&bkba_opt=1&context=design_studio_2&crop=0%2C0%2C0%2C0&overlay=0",
+      "sha256": "7d5faab55c72540380bd563ce5aa7ac873ce41e5d006b2dcffb0af2eac4640b2",
+      "bytes": 239976,
+      "dimensions": [
+        1440,
+        810
+      ],
+      "transparent": true,
+      "visualVerified": true
+    },
+    {
+      "id": "m3-refresh",
+      "code": "PN01",
+      "label": "Stealth Grey",
+      "hex": "#4c5056",
+      "src": "/assets/vehicles/m3-refresh-PN01.png",
+      "sourceUrl": "https://static-assets.tesla.com/configurator/compositor?options=%24MT369%2C%24PN01%2C%24W38A%2C%24IPB2&view=STUD_FRONT34&model=m3&size=1440&bkba_opt=1&context=design_studio_2&crop=0%2C0%2C0%2C0&overlay=0",
+      "sha256": "3df2b422e2823fb4f0b5fb7d72598e561bfab45baedf2b10fe520a825aaaac22",
+      "bytes": 238994,
+      "dimensions": [
+        1440,
+        810
+      ],
+      "transparent": true,
+      "visualVerified": true
+    },
+    {
+      "id": "m3-refresh",
+      "code": "PPSB",
+      "label": "Deep Blue Metallic",
+      "hex": "#17345d",
+      "src": "/assets/vehicles/m3-refresh-PPSB.png",
+      "sourceUrl": "https://static-assets.tesla.com/configurator/compositor?options=%24MT369%2C%24PPSB%2C%24W38A%2C%24IPB2&view=STUD_FRONT34&model=m3&size=1440&bkba_opt=1&context=design_studio_2&crop=0%2C0%2C0%2C0&overlay=0",
+      "sha256": "e96106fd7af701c9867ff58a6a8c88e4893c6e13af9b35966a4007c9164f31e2",
+      "bytes": 278572,
+      "dimensions": [
+        1440,
+        810
+      ],
+      "transparent": true,
+      "visualVerified": true
+    },
+    {
+      "id": "m3-refresh",
+      "code": "PR01",
+      "label": "Ultra Red",
+      "hex": "#a01022",
+      "src": "/assets/vehicles/m3-refresh-PR01.png",
+      "sourceUrl": "https://static-assets.tesla.com/configurator/compositor?options=%24MT369%2C%24PR01%2C%24W38A%2C%24IPB2&view=STUD_FRONT34&model=m3&size=1440&bkba_opt=1&context=design_studio_2&crop=0%2C0%2C0%2C0&overlay=0",
+      "sha256": "308c2629182f5b8481dbb674859f356be0fd7932a7774eaa9867f8c7a526ee00",
+      "bytes": 278766,
+      "dimensions": [
+        1440,
+        810
+      ],
+      "transparent": true,
+      "visualVerified": true
+    },
+    {
+      "id": "m3-refresh",
+      "code": "PN00",
+      "label": "Quicksilver",
+      "hex": "#9ba0a5",
+      "src": "/assets/vehicles/m3-refresh-PN00.png",
+      "sourceUrl": "https://static-assets.tesla.com/configurator/compositor?options=%24MT369%2C%24PN00%2C%24W38A%2C%24IPB2&view=STUD_FRONT34&model=m3&size=1440&bkba_opt=1&context=design_studio_2&crop=0%2C0%2C0%2C0&overlay=0",
+      "sha256": "ac4ca8ba3074555de10c6eceb7126ed3e39cc31acc379532dea0b94d16494156",
+      "bytes": 235302,
+      "dimensions": [
+        1440,
+        810
+      ],
+      "transparent": true,
+      "visualVerified": true
+    },
+    {
+      "id": "my-original",
+      "code": "PBSB",
+      "label": "Solid Black",
+      "hex": "#171819",
+      "src": "/assets/vehicles/my-original-PBSB.png",
+      "sourceUrl": "https://static-assets.tesla.com/v1/compositor/?options=%24MTY09%2C%24PBSB%2C%24WY19B%2C%24INPB0&view=STUD_3QTR&model=my&size=1440&bkba_opt=1",
+      "sha256": "f66e06be9488e83dd7559eb20b983b578317cbb7e571851e4cc2db8db1abc77f",
+      "bytes": 79256,
+      "dimensions": [
+        1440,
+        810
+      ],
+      "transparent": true,
+      "visualVerified": true
+    },
+    {
+      "id": "my-original",
+      "code": "PPSW",
+      "label": "Pearl White Multi-Coat",
+      "hex": "#efefec",
+      "src": "/assets/vehicles/my-original-PPSW.png",
+      "sourceUrl": "https://static-assets.tesla.com/v1/compositor/?options=%24MTY09%2C%24PPSW%2C%24WY19B%2C%24INPB0&view=STUD_3QTR&model=my&size=1440&bkba_opt=1",
+      "sha256": "0a0fad85df7979226ef215aa85aafc868becf85a882c9f63e0b5944951722669",
+      "bytes": 86332,
+      "dimensions": [
+        1440,
+        810
+      ],
+      "transparent": true,
+      "visualVerified": true
+    },
+    {
+      "id": "my-original",
+      "code": "PMNG",
+      "label": "Midnight Silver Metallic",
+      "hex": "#54565b",
+      "src": "/assets/vehicles/my-original-PMNG.png",
+      "sourceUrl": "https://static-assets.tesla.com/v1/compositor/?options=%24MTY09%2C%24PMNG%2C%24WY19B%2C%24INPB0&view=STUD_3QTR&model=my&size=1440&bkba_opt=1",
+      "sha256": "4e1a0511efb7d3b658f754259d1492169145f6d6e273beed83090191117888c5",
+      "bytes": 90752,
+      "dimensions": [
+        1440,
+        810
+      ],
+      "transparent": true,
+      "visualVerified": true
+    },
+    {
+      "id": "my-original",
+      "code": "PPSB",
+      "label": "Deep Blue Metallic",
+      "hex": "#17345d",
+      "src": "/assets/vehicles/my-original-PPSB.png",
+      "sourceUrl": "https://static-assets.tesla.com/v1/compositor/?options=%24MTY09%2C%24PPSB%2C%24WY19B%2C%24INPB0&view=STUD_3QTR&model=my&size=1440&bkba_opt=1",
+      "sha256": "bcdf39b216b6e0957ab8aee936430375039cf422c8fe12cf4d0cc6ff2b73d371",
+      "bytes": 94121,
+      "dimensions": [
+        1440,
+        810
+      ],
+      "transparent": true,
+      "visualVerified": true
+    },
+    {
+      "id": "my-original",
+      "code": "PPMR",
+      "label": "Red Multi-Coat",
+      "hex": "#8a1018",
+      "src": "/assets/vehicles/my-original-PPMR.png",
+      "sourceUrl": "https://static-assets.tesla.com/v1/compositor/?options=%24MTY09%2C%24PPMR%2C%24WY19B%2C%24INPB0&view=STUD_3QTR&model=my&size=1440&bkba_opt=1",
+      "sha256": "f566eb7d19098fcec45a05913293f0b94a6f32d90bfe3028625b1e8d05f76007",
+      "bytes": 92833,
+      "dimensions": [
+        1440,
+        810
+      ],
+      "transparent": true,
+      "visualVerified": true
+    },
+    {
+      "id": "my-refresh",
+      "code": "PX02",
+      "label": "Diamond Black",
+      "hex": "#151719",
+      "src": "/assets/vehicles/my-refresh-PX02.png",
+      "sourceUrl": "https://static-assets.tesla.com/configurator/compositor?options=%24MTY60%2C%24PX02%2C%24WY19P%2C%24IPB12&view=FRONT34&model=my&size=1440&bkba_opt=1&context=design_studio_2&crop=0%2C0%2C0%2C0&overlay=0",
+      "sha256": "061b0a75bed1c9033a49b44ff270b53c01d2bf7762777ed8e8e15d326213b82e",
+      "bytes": 266840,
+      "dimensions": [
+        1440,
+        810
+      ],
+      "transparent": true,
+      "visualVerified": true
+    },
+    {
+      "id": "my-refresh",
+      "code": "PPSW",
+      "label": "Pearl White Multi-Coat",
+      "hex": "#efefec",
+      "src": "/assets/vehicles/my-refresh-PPSW.png",
+      "sourceUrl": "https://static-assets.tesla.com/configurator/compositor?options=%24MTY60%2C%24PPSW%2C%24WY19P%2C%24IPB12&view=FRONT34&model=my&size=1440&bkba_opt=1&context=design_studio_2&crop=0%2C0%2C0%2C0&overlay=0",
+      "sha256": "8079379ea0eb96dc685dee59e41c1bf8a6a717a016cd2a1b9c1eb83823007feb",
+      "bytes": 276241,
+      "dimensions": [
+        1440,
+        810
+      ],
+      "transparent": true,
+      "visualVerified": true
+    },
+    {
+      "id": "my-refresh",
+      "code": "PN01",
+      "label": "Stealth Grey",
+      "hex": "#4c5056",
+      "src": "/assets/vehicles/my-refresh-PN01.png",
+      "sourceUrl": "https://static-assets.tesla.com/configurator/compositor?options=%24MTY60%2C%24PN01%2C%24WY19P%2C%24IPB12&view=FRONT34&model=my&size=1440&bkba_opt=1&context=design_studio_2&crop=0%2C0%2C0%2C0&overlay=0",
+      "sha256": "1a939862252f8f0053503c2a321078ba36b55c54b4e740049abf960c58eb7e9e",
+      "bytes": 288241,
+      "dimensions": [
+        1440,
+        810
+      ],
+      "transparent": true,
+      "visualVerified": true
+    },
+    {
+      "id": "my-refresh",
+      "code": "PPSB",
+      "label": "Deep Blue Metallic",
+      "hex": "#17345d",
+      "src": "/assets/vehicles/my-refresh-PPSB.png",
+      "sourceUrl": "https://static-assets.tesla.com/configurator/compositor?options=%24MTY60%2C%24PPSB%2C%24WY19P%2C%24IPB12&view=FRONT34&model=my&size=1440&bkba_opt=1&context=design_studio_2&crop=0%2C0%2C0%2C0&overlay=0",
+      "sha256": "6ecfd275099a34b62e855fa76515c45bce4fc4a8d5741499485bf0e712bd74fc",
+      "bytes": 314594,
+      "dimensions": [
+        1440,
+        810
+      ],
+      "transparent": true,
+      "visualVerified": true
+    },
+    {
+      "id": "my-refresh",
+      "code": "PR01",
+      "label": "Ultra Red",
+      "hex": "#a01022",
+      "src": "/assets/vehicles/my-refresh-PR01.png",
+      "sourceUrl": "https://static-assets.tesla.com/configurator/compositor?options=%24MTY60%2C%24PR01%2C%24WY19P%2C%24IPB12&view=FRONT34&model=my&size=1440&bkba_opt=1&context=design_studio_2&crop=0%2C0%2C0%2C0&overlay=0",
+      "sha256": "6beb7248692aacf9e4a726f9cfeee16cfa4d800796b81e38701e773adf05ec2b",
+      "bytes": 315861,
+      "dimensions": [
+        1440,
+        810
+      ],
+      "transparent": true,
+      "visualVerified": true
+    },
+    {
+      "id": "my-refresh",
+      "code": "PN00",
+      "label": "Quicksilver",
+      "hex": "#9ba0a5",
+      "src": "/assets/vehicles/my-refresh-PN00.png",
+      "sourceUrl": "https://static-assets.tesla.com/configurator/compositor?options=%24MTY60%2C%24PN00%2C%24WY19P%2C%24IPB12&view=FRONT34&model=my&size=1440&bkba_opt=1&context=design_studio_2&crop=0%2C0%2C0%2C0&overlay=0",
+      "sha256": "d13085e75021a4eb416dc9a18e5182e08b0fa4e33d705c0d23d8b29a51898f6d",
+      "bytes": 282927,
+      "dimensions": [
+        1440,
+        810
+      ],
+      "transparent": true,
+      "visualVerified": true
+    },
+    {
+      "id": "ms-modern",
+      "code": "PX02",
+      "label": "Diamond Black",
+      "hex": "#151719",
+      "src": "/assets/vehicles/ms-modern-PX02.png",
+      "sourceUrl": "https://static-assets.tesla.com/configurator/compositor?options=%24MTS22%2C%24PX02%2C%24WS93%2C%24IBE01&view=FRONT34&model=ms&size=1440&bkba_opt=1&context=design_studio_2&crop=0%2C0%2C0%2C0&overlay=0",
+      "sha256": "afae11c0370beb2b15904b55e2a32cf11e72cc9ad3e2550e7dba373cddea8d29",
+      "bytes": 262255,
+      "dimensions": [
+        1440,
+        810
+      ],
+      "transparent": true,
+      "visualVerified": true
+    },
+    {
+      "id": "ms-modern",
+      "code": "PPSW",
+      "label": "Pearl White Multi-Coat",
+      "hex": "#efefec",
+      "src": "/assets/vehicles/ms-modern-PPSW.png",
+      "sourceUrl": "https://static-assets.tesla.com/configurator/compositor?options=%24MTS22%2C%24PPSW%2C%24WS93%2C%24IBE01&view=FRONT34&model=ms&size=1440&bkba_opt=1&context=design_studio_2&crop=0%2C0%2C0%2C0&overlay=0",
+      "sha256": "3818d872310541a52863b5d2cdb5ee7705a782a2ccb036a29e1193bd5f1989d1",
+      "bytes": 280129,
+      "dimensions": [
+        1440,
+        810
+      ],
+      "transparent": true,
+      "visualVerified": true
+    },
+    {
+      "id": "ms-modern",
+      "code": "PN01",
+      "label": "Stealth Grey",
+      "hex": "#4c5056",
+      "src": "/assets/vehicles/ms-modern-PN01.png",
+      "sourceUrl": "https://static-assets.tesla.com/configurator/compositor?options=%24MTS22%2C%24PN01%2C%24WS93%2C%24IBE01&view=FRONT34&model=ms&size=1440&bkba_opt=1&context=design_studio_2&crop=0%2C0%2C0%2C0&overlay=0",
+      "sha256": "29b28a62ef7ee0dfffa30258c2c5b07366daa3aff088159c98f23595aa8d5c23",
+      "bytes": 287339,
+      "dimensions": [
+        1440,
+        810
+      ],
+      "transparent": true,
+      "visualVerified": true
+    },
+    {
+      "id": "ms-modern",
+      "code": "PB00",
+      "label": "Frost Blue Metallic",
+      "hex": "#6b879a",
+      "src": "/assets/vehicles/ms-modern-PB00.png",
+      "sourceUrl": "https://static-assets.tesla.com/configurator/compositor?options=%24MTS22%2C%24PB00%2C%24WS93%2C%24IBE01&view=FRONT34&model=ms&size=1440&bkba_opt=1&context=design_studio_2&crop=0%2C0%2C0%2C0&overlay=0",
+      "sha256": "65180b0f1ebbb3e36b0d447746245203268a56a7247a18eebc2db8df87626981",
+      "bytes": 328664,
+      "dimensions": [
+        1440,
+        810
+      ],
+      "transparent": true,
+      "visualVerified": true
+    },
+    {
+      "id": "ms-modern",
+      "code": "PR01",
+      "label": "Ultra Red",
+      "hex": "#a01022",
+      "src": "/assets/vehicles/ms-modern-PR01.png",
+      "sourceUrl": "https://static-assets.tesla.com/configurator/compositor?options=%24MTS22%2C%24PR01%2C%24WS93%2C%24IBE01&view=FRONT34&model=ms&size=1440&bkba_opt=1&context=design_studio_2&crop=0%2C0%2C0%2C0&overlay=0",
+      "sha256": "cdc8c15a56fa75022941c89d784bd9cb836ae4a9855aadf0031b51f2943961b5",
+      "bytes": 331269,
+      "dimensions": [
+        1440,
+        810
+      ],
+      "transparent": true,
+      "visualVerified": true
+    },
+    {
+      "id": "ms-modern",
+      "code": "PN02",
+      "label": "Lunar Silver",
+      "hex": "#a6adb4",
+      "src": "/assets/vehicles/ms-modern-PN02.png",
+      "sourceUrl": "https://static-assets.tesla.com/configurator/compositor?options=%24MTS22%2C%24PN02%2C%24WS93%2C%24IBE01&view=FRONT34&model=ms&size=1440&bkba_opt=1&context=design_studio_2&crop=0%2C0%2C0%2C0&overlay=0",
+      "sha256": "21d4ae19300707cc32b263074d5548a209bf5f4082465a6b7fd8605850c6e509",
+      "bytes": 289998,
+      "dimensions": [
+        1440,
+        810
+      ],
+      "transparent": true,
+      "visualVerified": true
+    },
+    {
+      "id": "mx-modern",
+      "code": "PX02",
+      "label": "Diamond Black",
+      "hex": "#151719",
+      "src": "/assets/vehicles/mx-modern-PX02.png",
+      "sourceUrl": "https://static-assets.tesla.com/configurator/compositor?options=%24MDLX%2C%24MTX22%2C%24PX02%2C%24WX02%2C%24STY5S%2C%24IBE01&view=FRONT34&model=mx&size=1440&bkba_opt=1&context=design_studio_2&crop=0%2C0%2C0%2C0&overlay=0",
+      "sha256": "776c025fd752dbc05cb334cfa128d0e37cf6412698af02351aba8e41d8e9da63",
+      "bytes": 277177,
+      "dimensions": [
+        1440,
+        810
+      ],
+      "transparent": true,
+      "visualVerified": true
+    },
+    {
+      "id": "mx-modern",
+      "code": "PPSW",
+      "label": "Pearl White Multi-Coat",
+      "hex": "#efefec",
+      "src": "/assets/vehicles/mx-modern-PPSW.png",
+      "sourceUrl": "https://static-assets.tesla.com/configurator/compositor?options=%24MDLX%2C%24MTX22%2C%24PPSW%2C%24WX02%2C%24STY5S%2C%24IBE01&view=FRONT34&model=mx&size=1440&bkba_opt=1&context=design_studio_2&crop=0%2C0%2C0%2C0&overlay=0",
+      "sha256": "64cce2088b7b11f61a22ee7493b0af2c84648e6a466526e53b840c0abbd3d87c",
+      "bytes": 288596,
+      "dimensions": [
+        1440,
+        810
+      ],
+      "transparent": true,
+      "visualVerified": true
+    },
+    {
+      "id": "mx-modern",
+      "code": "PN01",
+      "label": "Stealth Grey",
+      "hex": "#4c5056",
+      "src": "/assets/vehicles/mx-modern-PN01.png",
+      "sourceUrl": "https://static-assets.tesla.com/configurator/compositor?options=%24MDLX%2C%24MTX22%2C%24PN01%2C%24WX02%2C%24STY5S%2C%24IBE01&view=FRONT34&model=mx&size=1440&bkba_opt=1&context=design_studio_2&crop=0%2C0%2C0%2C0&overlay=0",
+      "sha256": "e656a93b6ffabba7c6dc44f8e861ea911856052c633ba376fd8b03e873dc8f47",
+      "bytes": 290797,
+      "dimensions": [
+        1440,
+        810
+      ],
+      "transparent": true,
+      "visualVerified": true
+    },
+    {
+      "id": "mx-modern",
+      "code": "PB00",
+      "label": "Frost Blue Metallic",
+      "hex": "#6b879a",
+      "src": "/assets/vehicles/mx-modern-PB00.png",
+      "sourceUrl": "https://static-assets.tesla.com/configurator/compositor?options=%24MDLX%2C%24MTX22%2C%24PB00%2C%24WX02%2C%24STY5S%2C%24IBE01&view=FRONT34&model=mx&size=1440&bkba_opt=1&context=design_studio_2&crop=0%2C0%2C0%2C0&overlay=0",
+      "sha256": "b3eae43e6bab64b5f616f855224f871a4d8880cce45d8afbf5aab2b1762204de",
+      "bytes": 310676,
+      "dimensions": [
+        1440,
+        810
+      ],
+      "transparent": true,
+      "visualVerified": true
+    },
+    {
+      "id": "mx-modern",
+      "code": "PR01",
+      "label": "Ultra Red",
+      "hex": "#a01022",
+      "src": "/assets/vehicles/mx-modern-PR01.png",
+      "sourceUrl": "https://static-assets.tesla.com/configurator/compositor?options=%24MDLX%2C%24MTX22%2C%24PR01%2C%24WX02%2C%24STY5S%2C%24IBE01&view=FRONT34&model=mx&size=1440&bkba_opt=1&context=design_studio_2&crop=0%2C0%2C0%2C0&overlay=0",
+      "sha256": "4b0fb2265aa6aeadc14f1bf49d306226a119dc21c99d3cd5bb5f13de08b9ef4c",
+      "bytes": 346644,
+      "dimensions": [
+        1440,
+        810
+      ],
+      "transparent": true,
+      "visualVerified": true
+    },
+    {
+      "id": "mx-modern",
+      "code": "PN02",
+      "label": "Lunar Silver",
+      "hex": "#a6adb4",
+      "src": "/assets/vehicles/mx-modern-PN02.png",
+      "sourceUrl": "https://static-assets.tesla.com/configurator/compositor?options=%24MDLX%2C%24MTX22%2C%24PN02%2C%24WX02%2C%24STY5S%2C%24IBE01&view=FRONT34&model=mx&size=1440&bkba_opt=1&context=design_studio_2&crop=0%2C0%2C0%2C0&overlay=0",
+      "sha256": "c545c9628b00200de6b7fd1a7d7796333435ae6086944e404531c33348120601",
+      "bytes": 300494,
+      "dimensions": [
+        1440,
+        810
+      ],
+      "transparent": true,
+      "visualVerified": true
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#161819">
+  <meta name="color-scheme" content="dark">
+  <meta name="description" content="Mate4Mobile. Every mile, in view. Your private TeslaMate companion.">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Mate4Mobile">
+  <title>Mate4Mobile</title>
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="alternate icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/vehicle-catalog.js" defer></script>
+  <script src="/appearance.js" defer></script>
+  <script src="/charts.js" defer></script>
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <div id="boot" class="boot" role="status"><img class="boot-mark" src="/brand-mark.svg" alt="Mate4Mobile" width="64" height="64"><span>Connecting to your car’s history</span></div>
+  <section id="login" class="login hidden" aria-labelledby="login-title">
+    <div class="login-art car-art"><img data-vehicle-image src="/assets/model-3.png" alt="Black Model 3" width="1440" height="810"></div>
+    <div class="login-content"><img class="brand-lockup" src="/brand-wordmark.svg" alt="Mate4Mobile" width="240" height="48"><h1 id="login-title">Every mile,<br>in view.</h1><p class="muted">Battery, charging and every journey.<br>All in one place.</p>
+      <form id="login-form"><label for="login-pass">Passphrase</label><input id="login-pass" name="password" type="password" autocomplete="current-password" required placeholder="Enter your passphrase"><button id="login-btn" class="primary" type="submit">Connect</button><p id="login-error" class="form-error" role="alert"></p></form>
+      <p class="fine">Your private TeslaMate companion</p>
+    </div>
+  </section>
+  <div id="shell" class="shell hidden">
+    <a href="#main" class="skip-link">Skip to content</a>
+    <aside class="sidebar" aria-label="Vehicle navigation">
+      <button class="sidebar-identity" data-view="now"><span id="sidebar-name">Your Tesla</span><span class="sidebar-battery"><span data-icon="battery"></span><span id="sidebar-range">Connecting…</span></span><span id="sidebar-state" class="muted">TeslaMate</span></button>
+      <nav id="desktop-nav"></nav>
+      <div class="sidebar-footer"><span class="model-wordmark" data-vehicle-wordmark>MODEL 3</span><span id="sidebar-odometer">—</span><button class="text-button" data-sheet="settings">Preferences</button><img class="sidebar-brand" src="/brand-wordmark.svg" alt="Mate4Mobile" width="168" height="34"><span class="fine">A TeslaMate companion</span></div>
+    </aside>
+    <div class="content">
+      <header class="topbar"><button id="back" class="icon-button hidden" aria-label="Back to vehicle"><span data-icon="back"></span></button><h1 id="screen-title" tabindex="-1">Your Tesla</h1><div class="topbar-actions"><button id="refresh" class="icon-button" aria-label="Refresh data"><span data-icon="refresh"></span></button><button class="icon-button" data-sheet="settings" aria-label="Preferences"><span data-icon="settings"></span></button></div></header>
+      <main id="main" tabindex="-1">
+        <div id="demo-banner" class="demo-banner hidden">Preview · Sample data</div>
+        <div id="connection-banner" class="notice hidden" role="status"></div>
+        <section id="view-now" class="view" aria-label="Vehicle overview">
+          <div class="vehicle-overview">
+            <div class="battery-heading"><div class="battery-line"><span id="battery-icon" class="battery-icon"><span id="battery-fill"></span></span><span id="soc" class="skeleton">—</span><span class="separator">·</span><span id="range" class="muted skeleton">—</span></div><div id="vehicle-state" class="vehicle-state" role="status">Connecting…</div><p id="freshness" class="freshness">Reading the latest recorded data</p></div>
+            <div class="car-stage"><div class="car-glow"></div><div class="car-art"><img data-vehicle-image src="/assets/model-3.png" width="1440" height="810" alt="Black Tesla Model 3 with aero wheels" fetchpriority="high"></div></div>
+            <div class="quick-actions"><button data-sheet="vehicle"><span data-icon="climate"></span><span id="quick-climate">Climate</span></button><button data-sheet="location"><span data-icon="pin"></span><span>Location</span></button><button data-view="charges"><span data-icon="bolt"></span><span>Charging</span></button><button data-view="activity"><span data-icon="activity"></span><span>Activity</span></button></div>
+          </div>
+          <div class="overview-details">
+            <button id="live-charge" class="live-charge hidden" data-view="charges"><div class="row-title"><span data-icon="bolt"></span><span>Charging</span><span id="live-power" class="green"></span><span class="chevron" data-icon="arrow"></span></div><div class="progress-track"><span id="live-fill"></span></div><div class="charge-sub"><span id="live-added"></span><span id="live-since"></span></div></button>
+            <section class="home-summary" aria-labelledby="today-heading"><div class="section-head"><h2 id="today-heading">Today</h2><button class="text-button" data-view="activity">View activity</button></div><div id="home-summary-body"><p class="summary-empty">Loading your day…</p></div></section>
+            <nav id="home-menu" class="home-menu" aria-label="Vehicle information"></nav>
+            <section class="home-history"><div class="section-head"><h2>Battery</h2><div class="segmented" aria-label="Battery history period"><button data-hours="24" aria-pressed="true">24 hours</button><button data-hours="168" aria-pressed="false">7 days</button></div></div><div id="battery-chart" class="chart-host"><div class="chart-skeleton skeleton"></div></div><div id="battery-events" class="battery-events"></div></section>
+            <footer class="vehicle-footer"><span class="model-wordmark" data-vehicle-wordmark>MODEL 3</span><span id="odometer">—</span><span id="software-version" class="fine"></span><span class="fine">Mate4Mobile · Powered by TeslaMate</span></footer>
+          </div>
+        </section>
+        <section id="view-activity" class="view detail-view hidden" aria-label="Activity timeline"><p class="view-subtitle">Every journey. Every charge.</p><div id="activity-current"></div><p id="activity-updated" class="fine"></p><div id="activity-list" class="activity-list"><div class="chart-skeleton skeleton" aria-label="Loading activity"></div></div><button id="more-activity" class="secondary load-more hidden">Load earlier activity</button></section>
+        <section id="view-drives" class="view detail-view hidden" aria-label="Drive history"><p class="view-subtitle">Every journey, in a little more detail.</p><div id="drive-totals" class="metrics-strip"></div><div class="section-head"><h2>Recent drives</h2><span class="muted">Newest first</span></div><div id="drives-list" class="history-list"></div><button id="more-drives" class="secondary load-more hidden">Load more drives</button></section>
+        <section id="view-charges" class="view detail-view hidden" aria-label="Charging history">
+          <div id="charging-active"></div>
+          <div class="section-head charging-period"><h2>Overview</h2><div class="segmented" aria-label="Charging period"><button data-charge-days="7" aria-pressed="false">Week</button><button data-charge-days="30" aria-pressed="true">Month</button><button data-charge-days="90" aria-pressed="false">3 months</button></div></div>
+          <div class="charging-layout"><section class="charging-overview"><div class="segmented mode-control" aria-label="Charging measure"><button data-charge-mode="energy" aria-pressed="true">Energy</button><button data-charge-mode="spend" aria-pressed="false">Spend</button></div><div id="charge-totals"></div><div id="charging-chart" class="chart-host"></div><p id="charging-coverage" class="fine"></p></section><section class="charging-locations"><h2>Where you charge</h2><div id="charge-locations"></div></section></div>
+          <div class="section-head history-head"><h2>Charging history</h2><span id="charge-history-period" class="muted">Last 30 days</span></div><div id="charges-list" class="history-list"></div><button id="more-charges" class="secondary load-more hidden">Load more charges</button>
+        </section>
+        <section id="view-stats" class="view detail-view hidden" aria-label="Energy and statistics">
+          <div class="section-head"><h2>Your energy</h2><div class="segmented" aria-label="Statistics period"><button data-days="30" aria-pressed="true">30 days</button><button data-days="90" aria-pressed="false">90 days</button></div></div><div id="stats-grid" class="metrics-grid"></div>
+          <section class="baseline-panel"><div id="baseline-status"></div><details id="battery-estimates" class="disclosure"><summary>Explore battery estimates</summary><div class="section-head"><h3>Early readings, longer-term context</h3><button class="icon-button" data-sheet="estimates" aria-label="About battery estimates"><span data-icon="info"></span></button></div><div id="health-grid" class="health-grid"></div><div id="health-chart" class="chart-host"></div><p class="fine">Inferred from recorded range and charging. These are estimates, not a battery diagnostic.</p></details></section>
+          <section class="alltime"><h2>Since logging began</h2><p id="logging-coverage" class="fine"></p><div id="alltime-grid" class="metrics-grid"></div></section>
+        </section>
+      </main>
+    </div>
+  </div>
+  <dialog id="sheet" aria-labelledby="sheet-title"><div id="sheet-handle" class="sheet-handle" aria-hidden="true"></div><header class="sheet-head"><h2 id="sheet-title">Details</h2><button id="sheet-close" class="icon-button" aria-label="Close details"><span data-icon="close"></span></button></header><div id="sheet-body" class="sheet-body"></div></dialog>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <noscript><p class="notice">Enable JavaScript to view your TeslaMate dashboard.</p></noscript>
+</body>
+</html>

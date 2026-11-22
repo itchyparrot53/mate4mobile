@@ -1,0 +1,22 @@
+[Unit]
+Description=Mate4Mobile TeslaMate companion
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=mate4mobile
+Group=mate4mobile
+WorkingDirectory=/opt/mate4mobile
+EnvironmentFile=/opt/mate4mobile/.env
+ExecStart=/usr/bin/node /opt/mate4mobile/server.js
+Restart=on-failure
+RestartSec=5
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+UMask=0077
+
+[Install]
+WantedBy=multi-user.target
