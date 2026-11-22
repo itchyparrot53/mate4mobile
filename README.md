@@ -11,7 +11,17 @@
 
 ## What is Mate4Mobile?
 
-A private, self-hosted dashboard for your existing **TeslaMate** installation. Check your battery, explore journeys and track charging costs from your phone or desktop. TeslaMate keeps logging; Mate4Mobile reads the recorded data.
+**TeslaMate records it. Mate4Mobile gives it a home on your phone.**
+
+Your battery, journeys and charging in a private, self-hosted dashboard that feels at home on your Home Screen. Connect it to your existing TeslaMate installation; your logger keeps doing what it does best.
+
+<p align="center">
+  <a href="https://itchyparrot53.github.io/mate4mobile/demo/">
+    <img src="docs/images/app-mobile.jpg" alt="Mate4Mobile vehicle overview on a phone — open the interactive demo" width="280">
+  </a>
+</p>
+
+<p align="center"><sub>Preview with synthetic data · <a href="https://itchyparrot53.github.io/mate4mobile/demo/">Try the interactive demo</a></sub></p>
 
 <a id="getting-started"></a>
 
@@ -73,15 +83,12 @@ Keep the passphrase and `.env` private. HTTPS is required with the default Secur
 
 ## Explore the app
 
-Battery at a glance · Daily activity · Journey maps · Charging costs · Touch-friendly charts
-
 <a id="screenshots"></a>
 
 <details>
-<summary><strong>Screenshots — mobile and desktop</strong></summary>
+<summary><strong>More screenshots — charging and desktop</strong></summary>
 
 <p align="center">
-  <img src="docs/images/app-mobile.jpg" alt="Vehicle overview with synthetic data" width="280">
   <img src="docs/images/charging-mobile.jpg" alt="Charging overview with synthetic data" width="280">
 </p>
 
