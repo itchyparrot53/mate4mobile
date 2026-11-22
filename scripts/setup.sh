@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+
 # Adds only Mate4Mobile. Never runs Compose in the TeslaMate project.
 set -euo pipefail
 umask 077

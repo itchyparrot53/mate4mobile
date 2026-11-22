@@ -1,4 +1,5 @@
 'use strict';
+
 const fs=require('node:fs/promises'),path=require('node:path');
 const root=path.resolve(__dirname,'..'),out=path.join(root,'dist/site');
 (async()=>{

@@ -1,4 +1,5 @@
 name: mate4mobile
+
 services:
   app:
     build:

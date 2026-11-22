@@ -1,4 +1,5 @@
 'use strict';
+
 const {Client}=require('pg');
 const {getCurrencyCode}=require('../public/money');
 const tables=['cars','settings','states','positions','drives','charging_processes','charges','updates','addresses','geofences'];

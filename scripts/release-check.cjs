@@ -1,4 +1,5 @@
 'use strict';
+
 const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
 const root=path.resolve(__dirname,'..');
 const ignored=new Set(['node_modules','.git','dist','.setup.lock']);

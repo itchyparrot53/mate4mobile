@@ -1,4 +1,5 @@
 'use strict';
+
 // Real Docker integration test. All containers, roles and data are disposable.
 const {spawnSync}=require('node:child_process');
 const fs=require('node:fs/promises'),path=require('node:path'),os=require('node:os'),crypto=require('node:crypto');

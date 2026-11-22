@@ -1,4 +1,5 @@
 -- Run with psql as the database owner connected to the TeslaMate database.
+
 -- Adjust the database name in GRANT CONNECT if it is not teslamate.
 -- Refuses an existing role; never takes over an existing account.
 \set ON_ERROR_STOP on

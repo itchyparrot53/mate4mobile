@@ -1,4 +1,5 @@
 # Host-installed Caddy, same host as the app's loopback port.
+
 # Replace the hostname. Configure your LAN DNS and trust Caddy's CA on each device.
 mate4mobile.home.arpa {
     tls internal
