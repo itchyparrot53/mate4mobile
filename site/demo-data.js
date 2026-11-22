@@ -1,4 +1,5 @@
 'use strict';
+
 // This file is ONLY copied into the static showcase. Production never loads it.
 // All names, routes, amounts and readings are invented. No database connection.
 (function(){

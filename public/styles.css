@@ -1,4 +1,5 @@
 @font-face { font-family: Inter; src: url('/assets/inter-latin.woff2') format('woff2'); font-style: normal; font-weight: 100 900; font-display: swap; }
+
 :root {
   --bg: #161819; --surface: #202223; --raised: #292b2d; --text: #f4f4f4;
   --muted: #a6a8ab; --faint: #92969a; --line: #333638; --green: #9ce6c5;

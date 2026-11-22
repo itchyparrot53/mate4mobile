@@ -1,4 +1,5 @@
 'use strict';
+
 (function (root, factory) {
   if (typeof module === 'object' && module.exports) module.exports = factory(require('./vehicle-catalog.js'));
   else root.TeslaAppearance = factory(root.TeslaVehicleCatalog);
