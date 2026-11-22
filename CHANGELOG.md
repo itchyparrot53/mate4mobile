@@ -1,5 +1,12 @@
 # Changelog
 
+## Unreleased
+
+- Fixed the installer integration test racing PostgreSQL's temporary bootstrap server. Readiness now requires a successful query against the target database over TCP.
+- Added deliberately delayed database initialization to exercise that race on every installer test run.
+- Expanded installer validation to use the shipped Compose configuration, including database doctor, container health, authentication and Secure cookies, with isolated project/image names and a random loopback port.
+- Tightened failure diagnostics, request timeouts, the excessive-grant assertion and disposable-volume cleanup.
+
 ## 2.4.0 — Mate4Mobile identity and public-source preparation
 
 - Established the Mate4Mobile name, original road-M symbol, M4M compact form, palette, wordmarks, brand board and exportable design tokens.
